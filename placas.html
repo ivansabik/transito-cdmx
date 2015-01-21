@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Consultas Tránsito DF</title>
+        <link href="/app/css/bootstrap.min.css" rel="stylesheet">
+        <link href="/app/css/estilo.css" rel="stylesheet">
+    </head>
+
+    <body>
+        <div class="container">
+				<h1 class="texto-logo centrado"><img src="/app/img/kaeffer.png"> Tránsito DF</h1>
+				<div id="cargando" class="centrado">
+					<button class="btn btn-lg btn-warning"><span class="glyphicon glyphicon-refresh glyphicon-refresh-animate"></span> Cargando...</button>
+				</div>
+				<div id="error" class="invisible"></div>
+				<div id="info-consulta" class="invisible">
+					<h3>Información del vehículo</h3>            
+					<div class="bg-info cuadro-info">
+                        <span class="titulo">Placas: </span><span id="placas"></span></br>
+						<span class="titulo">Modelo: </span><span id="modelo"></span></br>
+						<span class="titulo">Número de cilindros: </span><span id="numero-cilindros"></span></br>
+						<span class="titulo">Procedencia: </span><span id="procedencia"></span></br>
+						<span class="titulo">Valor factura: </span><span id="valor-factura" class="cacao"></span></br>
+						<span class="titulo">Clave vehicular: </span><span id="clave-vehicular"></span></br>
+						<span class="titulo">Fecha factura: </span><span id="fecha-factura"></span></br>
+						<span class="titulo">RFC: </span><span id="rfc"></span></br>
+						<span class="titulo">Monto depreciación: </span><span id="depreciacion" class="cacao"></span></br>
+                        <span class="titulo">Total adeudos: </span><span id="total-adeudos" class="cacao"></span>
+					</div>
+                    					
+					<h3>Adeudos tenencia</h3>
+                    <div id="adeudos-tenencia"></div>
+					
+					<h3>Infracciones</h3> 
+                    <div id="infracciones"></div>
+				</div>
+        </div>
+    <script src="/app/js/jquery.min.js"></script>
+    <script src="/app/js/bootstrap.min.js"></script>
+    <script src="/app/js/consulta.js"></script>
+    <script src="/app/js/autoNumeric.js"></script>
+    <script src="/app/js/jquery.fittext.js"></script>
+    </body>
+</html>

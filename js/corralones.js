@@ -1,0 +1,9 @@
+$(document).ready(function(){
+    $('#ver-corralones-todos').click(function(){
+        $.getJSON('/app/json/corralones.json',function(corralonesJson){
+            $('#lista-corralones').css('visibility','visible');
+            $('#ver-corralones-todos').blur();
+            console.log(corralonesJson);
+        });
+    });
+});

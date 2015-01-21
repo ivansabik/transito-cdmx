@@ -1,0 +1,824 @@
+{
+	"verificentros": [
+		{
+			"numero": "9001",
+			"razon_social": "CONTROL AMBIENTAL IXTAPALAPA, S.A. DE C.V.",
+			"direccion": "PEDRO ACEVES # 70 ESQ. CAYETANO ANDRADE, COL. STA. MARTHA ACATITLA",
+			"delegacion": "IZTAPALAPA",
+			"telefonos": "57335157 57347163",
+			"latitud": "19.3672",
+			"lon": "-99.0182",
+			"id": 0
+		},
+		{
+			"numero": "9002",
+			"razon_social": "CONTROL ATMOSFERICO DE MEXICO, S.A. DE C.V.",
+			"direccion": "RODOLFO GAONA # 86, COL. LOMAS DE SOTELO",
+			"delegacion": "MIGUEL HIDALGO",
+			"telefonos": "52803460",
+			"latitud": "19.4522",
+			"lon": "-99.218",
+			"id": 1
+		},
+		{
+			"numero": "9003",
+			"razon_social": "CONTROL ATMOSFERICO DE MEXICO, S.A. DE C.V.",
+			"direccion": "EJE 5 SUR, MANZANA 5 LOTE, 3 COL. CENTRAL DE ABASTOS",
+			"delegacion": "IZTAPALAPA",
+			"telefonos": "56940734",
+			"latitud": "19.3802",
+			"lon": "-99.0901",
+			"id": 2
+		},
+		{
+			"numero": "9004",
+			"razon_social": "CONTROL ATMOSFERICO DE MEXICO, S.A. DE C.V.",
+			"direccion": "PROL. EJE CENTRAL LAZARO CARDENAS # 120, COL. LA CANDELARIA",
+			"delegacion": "COYOACAN",
+			"telefonos": "56106585",
+			"latitud": "19.3335",
+			"lon": "-99.1513",
+			"id": 3
+		},
+		{
+			"numero": "9005",
+			"razon_social": "CONTROL ATMOSFERICO DE MEXICO, S.A. DE C.V.",
+			"direccion": "COLTONGO # 67 COL. COLTONGO",
+			"delegacion": "AZCAPOTZALCO",
+			"telefonos": "57191023",
+			"latitud": "19.4796",
+			"lon": "-99.149",
+			"id": 4
+		},
+		{
+			"numero": "9006",
+			"razon_social": "VERIFICACION DURANGO, S.A. DE C.V.",
+			"direccion": "AV. CUAUHTEMOC # 85, COL. ROMA",
+			"delegacion": "CUAUHTEMOC",
+			"telefonos": "55254441 55253431",
+			"latitud": "19.4218",
+			"lon": "-99.1541",
+			"id": 5
+		},
+		{
+			"numero": "9007",
+			"razon_social": "VERIFICACION BARRAGAN, S.A. DE C.V.",
+			"direccion": "HENRY FORD # 5631, COL BONDOJITO",
+			"delegacion": "GUSTAVO A. MADERO",
+			"telefonos": "57606155 57606333",
+			"latitud": "19.4671",
+			"lon": "-99.1102",
+			"id": 6
+		},
+		{
+			"numero": "9008",
+			"razon_social": "VERIFICACION MISTERIOS, S.A. DE C.V.",
+			"direccion": "CALZ. DE GUADALUPE # 296, COL. VALLEJO",
+			"delegacion": "GUSTAVO A. MADERO",
+			"telefonos": "55375416 55375187",
+			"latitud": "19.4664",
+			"lon": "-99.1245",
+			"id": 7
+		},
+		{
+			"numero": "9009",
+			"razon_social": "M A C 3, S.A DE C.V.",
+			"direccion": "AV. ERMITA IZTAPALAPA # 4054, COL. SANTA MARTHA ACATITLA",
+			"delegacion": "IZTAPALAPA",
+			"telefonos": "54824063",
+			"latitud": "19.3564",
+			"lon": "-99.0059",
+			"id": 8
+		},
+		{
+			"numero": "9010",
+			"razon_social": "MAC 4, S.A.D E C.V.",
+			"direccion": "AV. TAXQUE\u00d1A # 2395, COL. SAN FRANCISCO CULHUACAN",
+			"delegacion": "IZTAPALAPA",
+			"telefonos": "54824064",
+			"latitud": "19.3384",
+			"lon": "-99.1123",
+			"id": 9
+		},
+		{
+			"numero": "9011",
+			"razon_social": "M A C 2, S.A. DE C.V.",
+			"direccion": "PROLONGACION SAN ANTONIO # 705, COL. LOMAS DE BECERRA",
+			"delegacion": "ALVARO OBREGON",
+			"telefonos": "54824062",
+			"latitud": "19.382",
+			"lon": "-99.2015",
+			"id": 10
+		},
+		{
+			"numero": "9012",
+			"razon_social": "DIAGNOSTICO AUTOMOTORES, S.A DE C.V.",
+			"direccion": "CALZ. MEXICO TACUBA # 1292, COL. ARGENTINA",
+			"delegacion": "MIGUEL HIDALGO",
+			"telefonos": "53862196 53861782",
+			"latitud": "19.4568",
+			"lon": "-99.2061",
+			"id": 11
+		},
+		{
+			"numero": "9013",
+			"razon_social": "VERIFICACION CUAUHTEMOC, S.A DE C.V.",
+			"direccion": "CALZ. IGNACIO ZARAGOZA # 1444, COL. JUAN ESCUTIA",
+			"delegacion": "IZTAPALAPA",
+			"telefonos": "55580101 57014551",
+			"latitud": "19.3951",
+			"lon": "-99.0523",
+			"id": 12
+		},
+		{
+			"numero": "9014",
+			"razon_social": "M A C 1, S.A DE C.V.",
+			"direccion": "AV. 510 # 340, COL. SAN JUAN DE ARAGON",
+			"delegacion": "GUSTAVO A. MADERO",
+			"telefonos": "54824061 54824050",
+			"latitud": "19.4648",
+			"lon": "-99.084",
+			"id": 13
+		},
+		{
+			"numero": "9015",
+			"razon_social": "CONTROL ATMOSFERICO DE MEXICO, S.A. DE C.V.",
+			"direccion": "LA TURBA # 68 MZ. 208 LOTE 52, COL. GRANJAS CABRERA",
+			"delegacion": "TLAHUAC",
+			"telefonos": "58595395",
+			"latitud": "19.3035",
+			"lon": "-99.0641",
+			"id": 14
+		},
+		{
+			"numero": "9016",
+			"razon_social": "CONSULTORIA PRO AMBIENTAL, S.A. DE C.V.",
+			"direccion": "AV. GPE. I. RAMIREZ # 679, COL. LA NORIA TEPEPAN",
+			"delegacion": "XOCHIMILCO",
+			"telefonos": "56767271 56530949",
+			"latitud": "19.2685",
+			"lon": "-99.1263",
+			"id": 15
+		},
+		{
+			"numero": "9017",
+			"razon_social": "DIAGNOSTICO DE EMISIONES, S.A. DE C.V.",
+			"direccion": "AV. GUERRERO # 55, COL. GUERRERO",
+			"delegacion": "CUAUHTEMOC",
+			"telefonos": "55462920 55464593",
+			"latitud": "19.4407",
+			"lon": "-99.1484",
+			"id": 16
+		},
+		{
+			"numero": "9018",
+			"razon_social": "GESTION DEL AIRE, S.A. DE C.V.",
+			"direccion": "CALLE CHILPANCINGO # 142, COL. ROMA SUR",
+			"delegacion": "CUAUHTEMOC",
+			"telefonos": "55847379 55741175",
+			"latitud": "19.4023",
+			"lon": "-99.1683",
+			"id": 17
+		},
+		{
+			"numero": "9019",
+			"razon_social": "CONTROL ATMOSFERICO DE MEXICO, S.A. DE C. V.",
+			"direccion": "GABRIEL MANCERA # 305, COL. DEL VALLE",
+			"delegacion": "BENITO JUAREZ",
+			"telefonos": "56396616 56396616",
+			"latitud": "19.3941",
+			"lon": "-99.1627",
+			"id": 18
+		},
+		{
+			"numero": "9020",
+			"razon_social": "SERVICIO AMBIENTAL AZCAPOTZALCO, S.A. DE C.V.",
+			"direccion": "AV. REFINERIA AZCAPOTZALCO # 190, COL. SANTA INES",
+			"delegacion": "AZCAPOTZALCO",
+			"telefonos": "53947196 53826333",
+			"latitud": "19.4922",
+			"lon": "-99.1906",
+			"id": 19
+		},
+		{
+			"numero": "9021",
+			"razon_social": "SERVICIOS DE MEDICION ORGANIZADA DE GASES, S.A. DE C.V.",
+			"direccion": "CALZ. DE LOS GALLOS # 1, COL. AGRICULTURA",
+			"delegacion": "MIGUEL HIDALGO",
+			"telefonos": "53410448 53418930",
+			"latitud": "19.456",
+			"lon": "-99.1643",
+			"id": 20
+		},
+		{
+			"numero": "9022",
+			"razon_social": "RENOVACION AUTOMOTRIZ, S.A DE C.V.",
+			"direccion": "NORTE 25 # 4, ESQ. OCEANIA, COL. MOCTEZUMA 2DA. SECCION",
+			"delegacion": "VENUSTIANO CARRANZA",
+			"telefonos": "57845558",
+			"latitud": "19.4362",
+			"lon": "-99.1034",
+			"id": 21
+		},
+		{
+			"numero": "9023",
+			"razon_social": "SERVICIO DE VERIFICACION EXPRESS VEYCA, S.A. DE C.V.",
+			"direccion": "CALZ. DE GUADALUPE. #. 70 COL. EXHIPODROMO DE PERALVILLO",
+			"delegacion": "CUAUHTEMOC",
+			"telefonos": "55264284 55291879",
+			"latitud": "19.4565",
+			"lon": "-99.1285",
+			"id": 22
+		},
+		{
+			"numero": "9024",
+			"razon_social": "SERVICIOS DE MEDICION ORGANIZADA DE GASES, S.A. DE C.V.",
+			"direccion": "MARIANO ESCOBEDO # 164, COL. ANAHUAC",
+			"delegacion": "MIGUEL HIDALGO",
+			"telefonos": "55317894 55450421",
+			"latitud": "19.4454",
+			"lon": "-99.1824",
+			"id": 23
+		},
+		{
+			"numero": "9025",
+			"razon_social": "PROYECCIONES AMBIENTALES, S.A DE C.V.",
+			"direccion": "AV.INSURGENTES #2358, COL. CHIMALISTAC",
+			"delegacion": "ALVARO OBREGON",
+			"telefonos": "56622481 56622810",
+			"latitud": "19.3432",
+			"lon": "-99.1892",
+			"id": 24
+		},
+		{
+			"numero": "9026",
+			"razon_social": "GRUPO ORNUTO, S.A DE C.V.",
+			"direccion": "AV. SANTA ANA # 327, COL. PRESIDENTES EJIDALES 2DA. SECCION.",
+			"delegacion": "COYOACAN",
+			"telefonos": "56564642 56955981",
+			"latitud": "19.3291",
+			"lon": "-99.1233",
+			"id": 25
+		},
+		{
+			"numero": "9027",
+			"razon_social": "CORPORATIVO TOSO, S.A DE C.V.",
+			"direccion": "VAINILLA # 248 BIS , COL. GRANJAS MEXICO",
+			"delegacion": "IZTACALCO",
+			"telefonos": "56499643 56493326",
+			"latitud": "19.4012",
+			"lon": "-99.1007",
+			"id": 26
+		},
+		{
+			"numero": "9028",
+			"razon_social": "CENTRO VEHICULAR DE MEXICO, S.A DE C.V.",
+			"direccion": "AVIACION MILITAR LOTE 8 # 24, COL. FRACC. INDUSTRIAL PUERTO AEREO.",
+			"delegacion": "VENUSTIANO CARRANZA",
+			"telefonos": "57628734 57628735",
+			"latitud": "19.4228",
+			"lon": "-99.0936",
+			"id": 27
+		},
+		{
+			"numero": "9029",
+			"razon_social": "EMISIONES LA VIGA, S.A. DE C.V.",
+			"direccion": "CALZ. DE LA VIGA # 461, COL. VIADUCTO PIEDAD",
+			"delegacion": "IZTACALCO",
+			"telefonos": "55385437 55195513",
+			"latitud": "19.402",
+			"lon": "-99.1253",
+			"id": 28
+		},
+		{
+			"numero": "9030",
+			"razon_social": "numero PEDREGAL, S.A DE C.V.",
+			"direccion": "CARRETERA PICACHO AJUSCO # 933, COL. HEROES DE PADIERNA",
+			"delegacion": "TLALPAN",
+			"telefonos": "56305717 56305718",
+			"latitud": "19.2809",
+			"lon": "-99.2149",
+			"id": 29
+		},
+		{
+			"numero": "9031",
+			"razon_social": "numero EL ROSARIO, S.A DE C.V.",
+			"direccion": "AV. DE LAS CULTURAS # 33 ESQ. RENACIM. UNIDAD HAB. EL ROSARIO",
+			"delegacion": "AZCAPOTZALCO",
+			"telefonos": "53198073 53198074",
+			"latitud": "19.5083",
+			"lon": "-99.2079",
+			"id": 30
+		},
+		{
+			"numero": "9032",
+			"razon_social": "numero SAN JOAQUIN, S.A DE C.V.",
+			"direccion": "CALLE DE LAGO HIELMAR # 23, COL. PENSIL",
+			"delegacion": "MIGUEL HIDALGO",
+			"telefonos": "55450574 55457680",
+			"latitud": "19.4461",
+			"lon": "-99.1917",
+			"id": 31
+		},
+		{
+			"numero": "9033",
+			"razon_social": "numero SIGLO XXI, S.A. DE C.V.",
+			"direccion": "LUIS SPOTA # 24 COL. SAN SIMON TICUMAC",
+			"delegacion": "BENITO JUAREZ",
+			"telefonos": "56741028 56740790",
+			"latitud": "19.3767",
+			"lon": "-99.1418",
+			"id": 32
+		},
+		{
+			"numero": "9034",
+			"razon_social": "ARTE AUTOMOTRIZ, S. DE R.L. DE C.V.",
+			"direccion": "AVE. PACIFICO # 293, COL. LOS REYES COYOACAN",
+			"delegacion": "COYOACAN",
+			"telefonos": "55440339 56193980",
+			"latitud": "19.3357",
+			"lon": "-99.1486",
+			"id": 33
+		},
+		{
+			"numero": "9035",
+			"razon_social": "DINAMICA EN EQUIPO INDUSTRIAL, S.A. DE C.V.",
+			"direccion": "AV. CONGRESO DE LA UNION # 38, COL. GRANJAS MODERNAS",
+			"delegacion": "GUSTAVO A. MADERO",
+			"telefonos": "57816582 55771533",
+			"latitud": "19.4791",
+			"lon": "-99.1069",
+			"id": 34
+		},
+		{
+			"numero": "9036",
+			"razon_social": "IMPULSORA ECOLOGICA SANTA FE, S.A. DE C.V.",
+			"direccion": "AV. VASCO DE QUIROGA # 1845, COL. SANTA FE",
+			"delegacion": "ALVARO OBREGON",
+			"telefonos": "55708628 55708943",
+			"latitud": "19.3801",
+			"lon": "-99.246",
+			"id": 35
+		},
+		{
+			"numero": "9037",
+			"razon_social": "AUTO SERVICIO ESPINO, S.A.",
+			"direccion": "ANTONIO MAURA # 107, COL. MODERNA",
+			"delegacion": "BENITO JUAREZ",
+			"telefonos": "56962038 55906749",
+			"latitud": "19.3952",
+			"lon": "-99.1365",
+			"id": 36
+		},
+		{
+			"numero": "9038",
+			"razon_social": "numero, S.A. DE C.V.",
+			"direccion": "AVE. GABRIEL MANCERA # 730, COL. DEL VALLE",
+			"delegacion": "BENITO JUAREZ",
+			"telefonos": "56693950 56693951",
+			"latitud": "19.388",
+			"lon": "-99.1638",
+			"id": 37
+		},
+		{
+			"numero": "9039",
+			"razon_social": "SUPER AMBIENTAL CUAJIMALPA, S.A. DE C.V.",
+			"direccion": "CARRETA FEDERAL. MEXICO-TOLUCA # 5395, COL. EL MOLINO",
+			"delegacion": "CUAJIMALPA",
+			"telefonos": "52242848 52922105",
+			"latitud": "19.3637",
+			"lon": "-99.2856",
+			"id": 38
+		},
+		{
+			"numero": "9040",
+			"razon_social": "CONTROL ECOLOGICO COYOACAN, S.A. DE C.V.",
+			"direccion": "RANCHO SAN LORENZO # 153, COL. LOS GIRASOLES",
+			"delegacion": "COYOACAN",
+			"telefonos": "56796988 56790307",
+			"latitud": "19.3054",
+			"lon": "-99.1268",
+			"id": 39
+		},
+		{
+			"numero": "9041",
+			"razon_social": "VERIFIEXPRESS, S.A. DE C.V.",
+			"direccion": "CALZADA LAS AGUILAS # 969, COL. AMP. LAS AGUILAS",
+			"delegacion": "ALVARO OBREGON",
+			"telefonos": "56354991",
+			"latitud": "19.3508",
+			"lon": "-99.22",
+			"id": 40
+		},
+		{
+			"numero": "9042",
+			"razon_social": "TECNO AMBIENTAL NATIVITAS, S.A. DE C.V.",
+			"direccion": "CAMINO A NATIVITAS # 471, COL. BARRIO XALTOCAN",
+			"delegacion": "XOCHIMILCO",
+			"telefonos": "56753826 56752223",
+			"latitud": "19.2512",
+			"lon": "-99.0987",
+			"id": 41
+		},
+		{
+			"numero": "9043",
+			"razon_social": "VERIFIMOTORS, S.A. DE C.V.",
+			"direccion": "AV. SAN FRANCISCO MZ 29 LT 13, COL. GUADALUPE TLALTENCO",
+			"delegacion": "TLAHUAC",
+			"telefonos": "58410000 58410992",
+			"latitud": "19.2973",
+			"lon": "-99.0087",
+			"id": 42
+		},
+		{
+			"numero": "9044",
+			"razon_social": "CARTOM, S.A. DE C.V.",
+			"direccion": "MAR DEL NECTAR ESQ. AV. TLAHUAC MZ. 115 LT-1 COL. \u00c9L TRIANGULO",
+			"delegacion": "TLAHUAC",
+			"telefonos": "58412613 58413017",
+			"latitud": "19.283",
+			"lon": "-99.011",
+			"id": 43
+		},
+		{
+			"numero": "9045",
+			"razon_social": "MECANICA AMBIENTAL, S.A. DE C.V.",
+			"direccion": "AVE. SAN JUAN BOSCO # 19, COL. HUIPULCO",
+			"delegacion": "TLALPAN",
+			"telefonos": "56550829 56550764",
+			"latitud": "19.2974",
+			"lon": "-99.1497",
+			"id": 44
+		},
+		{
+			"numero": "9046",
+			"razon_social": "VERIFICACION SANTA LUCIA, S.A. DE C.V.",
+			"direccion": "CAMINO A SANTA LUCIA # 814, COL. HOGAR Y REDENCION",
+			"delegacion": "ALVARO OBREGON",
+			"telefonos": "56602258 56602271",
+			"latitud": "19.3728",
+			"lon": "-99.2077",
+			"id": 45
+		},
+		{
+			"numero": "9047",
+			"razon_social": "VERIFICACION 100 METROS, S.A. DE C.V.",
+			"direccion": "CALLE 14 # 264, COL. GUADALUPE PROLETARIA",
+			"delegacion": "GUSTAVO A. MADERO",
+			"telefonos": "53675136 53675135",
+			"latitud": "19.5231",
+			"lon": "-99.1567",
+			"id": 46
+		},
+		{
+			"numero": "9048",
+			"razon_social": "numero MAP DEL SUR, S.A. DE C.V.",
+			"direccion": "AVENIDA NUEVO LEON # 69, COL. BARRIO SAN CRISTOBAL",
+			"delegacion": "XOCHIMILCO",
+			"telefonos": "56538706 56538705",
+			"latitud": "19.262",
+			"lon": "-99.1002",
+			"id": 47
+		},
+		{
+			"numero": "9049",
+			"razon_social": "numero DE TLALPAN, S.A. DE C.V.",
+			"direccion": "CALZADA DEL HUESO # 969 COL GRANJAS COAPA",
+			"delegacion": "TLALPAN",
+			"telefonos": "56 71 06 26 56 71 20 86",
+			"latitud": "19.2993",
+			"lon": "-99.1084",
+			"id": 48
+		},
+		{
+			"numero": "9050",
+			"razon_social": "COORDINACION AMBIENTAL, S.A. DE C.V.",
+			"direccion": "AV. MEXICO # 1249, COL. LA CRUZ",
+			"delegacion": "MAGDALENA CONTRERAS",
+			"telefonos": "55682479 55682026",
+			"latitud": "19.3093",
+			"lon": "-99.2312",
+			"id": 49
+		},
+		{
+			"numero": "9051",
+			"razon_social": "ASEROEMPRESA, S.A. DE C.V.",
+			"direccion": "RODRIGUEZ SARO # 410, COL. DEL VALLE",
+			"delegacion": "BENITO JUAREZ",
+			"telefonos": "55245670 55246112",
+			"latitud": "19.3654",
+			"lon": "-99.1739",
+			"id": 50
+		},
+		{
+			"numero": "9052",
+			"razon_social": "CONTROL ECOLOGICO VALLEJO, S.A. DE C.V.",
+			"direccion": "ORIENTE 174 # 505, COL. MOCTZUMA 2DA. SECCION",
+			"delegacion": "VENUSTIANO CARRANZA",
+			"telefonos": "31830320 31830322",
+			"latitud": "19.438",
+			"lon": "-99.0902",
+			"id": 51
+		},
+		{
+			"numero": "9053",
+			"razon_social": "ECO AMBIENTAL CUAHUTEMOC, S.A. DE C.V.",
+			"direccion": "CALLE ALVARO OBREGON # 271, COL. ROMA",
+			"delegacion": "CUAUHTEMOC",
+			"telefonos": "55145544 52084411 FAX",
+			"latitud": "19.4169",
+			"lon": "-99.1677",
+			"id": 52
+		},
+		{
+			"numero": "9054",
+			"razon_social": "PURO AIRE, S.A. DE C.V.",
+			"direccion": "TONATZIN # 93 COL. TLAXPANA",
+			"delegacion": "MIGUEL HIDALGO",
+			"telefonos": "55462592 55668171",
+			"latitud": "19.4397",
+			"lon": "-99.1712",
+			"id": 53
+		},
+		{
+			"numero": "9055",
+			"razon_social": "VERIPATRIOTISMO, S.A. DE C.V.",
+			"direccion": "AV. JOSE MARTI # 147 COL. ESCANDON",
+			"delegacion": "MIGUEL HIDALGO",
+			"telefonos": "52724293 52724349",
+			"latitud": "19.4027",
+			"lon": "-99.1787",
+			"id": 54
+		},
+		{
+			"numero": "9056",
+			"razon_social": "CENTRO DE VERIFICACION AMBIENTAL MILENIUM, S.A. DE C.V.",
+			"direccion": "28 DE DICIEMBRE # 17 COL. EMILIANO ZAPATA",
+			"delegacion": "COYOACAN",
+			"telefonos": "56792028",
+			"latitud": "19.3278",
+			"lon": "-99.1372",
+			"id": 55
+		},
+		{
+			"numero": "9057",
+			"razon_social": "CENTRO ANTISMOG, S.A. DE C.V.",
+			"direccion": "CERRADA DE AVENIDA DE LAS GRANJAS # 61 COL. JARDIN AZPEITIA",
+			"delegacion": "AZCAPOTZALCO",
+			"telefonos": "53520060 53520032",
+			"latitud": "19.4878",
+			"lon": "-99.1734",
+			"id": 56
+		},
+		{
+			"numero": "9058",
+			"razon_social": "CONTROL ECOLOGICO CORPUS CHRISTY, S.A. DE C.V.",
+			"direccion": "AV. SN. JERONIMO # 382 COL. JARDINES DEL PEDREGAL",
+			"delegacion": "ALVARO OBREGON",
+			"telefonos": "61356256 62727794",
+			"latitud": "19.3331",
+			"lon": "-99.2017",
+			"id": 57
+		},
+		{
+			"numero": "9059",
+			"razon_social": "CENTRO DE VERIFICACION ALVARO OBREGON, S.A. DE C.V.",
+			"direccion": "AV. VASCO DE QUIROGA # 1552 COL. SANTA FE",
+			"delegacion": "ALVARO OBREGON",
+			"telefonos": "55706042 55706019",
+			"latitud": "19.3833",
+			"lon": "-99.2346",
+			"id": 58
+		},
+		{
+			"numero": "9061",
+			"razon_social": "CENTRO DE VERIFICACION TAMAULIPAS, S.A. DE C.V.",
+			"direccion": "CALZ. DE LA VIGA # 222-B, COL. ARTES GRAFICAS",
+			"delegacion": "VENUSTIANO CARRANZA",
+			"telefonos": "57400405 57400618",
+			"latitud": "19.4111",
+			"lon": "-99.1271",
+			"id": 59
+		},
+		{
+			"numero": "9062",
+			"razon_social": "INGENIERIA ECOLOGICA AMBIENTAL, S.A. DE C.V.",
+			"direccion": "CALZ. DEL HUESO # 570, COL. EXHACIENDA COAPA",
+			"delegacion": "COYOACAN",
+			"telefonos": "56792230 56792330",
+			"latitud": "19.3037",
+			"lon": "-99.1236",
+			"id": 60
+		},
+		{
+			"numero": "9063",
+			"razon_social": "CENTRO DE VERIFICACION VIDA Y AMBIENTE, S.A. DE C.V.",
+			"direccion": "AV. MEXICO ORIENTE # 377 COL. SAN GREGORIO ATLAPULCO",
+			"delegacion": "XOCHIMILCO",
+			"telefonos": "58432561 58432554",
+			"latitud": "19.2528",
+			"lon": "-99.0528",
+			"id": 61
+		},
+		{
+			"numero": "9064",
+			"razon_social": "DR. NAVARRO VERIFICACIONES, S.A. DE C.V.",
+			"direccion": "DR, NAVARRO # 4 COL. DOCTORES",
+			"delegacion": "CUAUHTEMOC",
+			"telefonos": "55780536 55780542",
+			"latitud": "19.4203",
+			"lon": "-99.1437",
+			"id": 62
+		},
+		{
+			"numero": "9065",
+			"razon_social": "RONI, S.A. DE C.V.",
+			"direccion": "JOSE URBANO FONSECA # 311 COL. CAPULTITLAN",
+			"delegacion": "GUSTAVO A. MADERO",
+			"telefonos": "55772557 55772573",
+			"latitud": "19.4798",
+			"lon": "-99.131",
+			"id": 63
+		},
+		{
+			"numero": "9066",
+			"razon_social": "VERIFICENTROS PROVIDA, S.A. DE C.V.",
+			"direccion": "INSURGENTES SUR # 211, COL. ROMA",
+			"delegacion": "CUAUHTEMOC",
+			"telefonos": "54824065 54824069",
+			"latitud": "19.4201",
+			"lon": "-99.1645",
+			"id": 64
+		},
+		{
+			"numero": "9067",
+			"razon_social": "NOVA AMBIENTAL, S.A. DE C.V.",
+			"direccion": "CALLE ANAHUAC # 139, COL. EL MIRADOR EXHACIENDA COAPA",
+			"delegacion": "COYOACAN",
+			"telefonos": "56034218 56034219",
+			"latitud": "19.304",
+			"lon": "-99.1098",
+			"id": 65
+		},
+		{
+			"numero": "9068",
+			"razon_social": "CERVITEC, SERVICIO TECNICO ECOLOGICO, S.A DE C.V.",
+			"direccion": "JOSE URBANO FONSECA # 362, COL. CAPULTITLAN",
+			"delegacion": "GUSTAVO A. MADERO",
+			"telefonos": "57819713",
+			"latitud": "19.4805",
+			"lon": "-99.1333",
+			"id": 66
+		},
+		{
+			"numero": "9070",
+			"razon_social": "CONTROLES MEXICANOS DE EMISIONES, S.A. DE C.V.",
+			"direccion": "CALLE JUPITER # 70, COL. NUEVA INDUSTRIAL VALLEJO",
+			"delegacion": "GUSTAVO A. MADERO",
+			"telefonos": "57540314 57540318",
+			"latitud": "19.511",
+			"lon": "-99.1541",
+			"id": 67
+		},
+		{
+			"numero": "9071",
+			"razon_social": "CORPOTORSES, S.A. DE C.V.",
+			"direccion": "AV. TLAHUAC # 2689, COL. MIGUEL HIDALGO",
+			"delegacion": "TLAHUAC",
+			"telefonos": "56738113 56739445",
+			"latitud": "19.2992",
+			"lon": "-99.0436",
+			"id": 68
+		},
+		{
+			"numero": "9072",
+			"razon_social": "numero SAN RAFAEL, S.A. DE C.V.",
+			"direccion": "MANUEL MARIA CONTRERAS # 16, COL. SAN RAFAEL",
+			"delegacion": "CUAUHTEMOC",
+			"telefonos": "57033612 57032794",
+			"latitud": "19.4417",
+			"lon": "-99.1639",
+			"id": 69
+		},
+		{
+			"numero": "9073",
+			"razon_social": "IMPULSORA ECOLOGICA BARRAGAN, S.A. DE C.V.",
+			"direccion": "DR. BARRAGAN #.188, COL. DOCTORES",
+			"delegacion": "CUAUHTEMOC",
+			"telefonos": "55787907 55789913",
+			"latitud": "19.4151",
+			"lon": "-99.1449",
+			"id": 70
+		},
+		{
+			"numero": "9074",
+			"razon_social": "IMPULSORA ECOLOGICA MADERO, S.A. DE C.V.",
+			"direccion": "AV. SAN JERONIMO #1887 COL. EL TORO",
+			"delegacion": "MAGDALENA CONTRERAS",
+			"telefonos": "56681495 55956206",
+			"latitud": "19.3129",
+			"lon": "-99.2439",
+			"id": 71
+		},
+		{
+			"numero": "9075",
+			"razon_social": "VERIFICACIONES CENTENARIO, S.A. DE C.V.",
+			"direccion": "AV. 5 DE MAYO # 467 COL. MERCED GOMEZ",
+			"delegacion": "ALVARO OBREGON",
+			"telefonos": "56602906 56602913",
+			"latitud": "19.3655",
+			"lon": "-99.2067",
+			"id": 72
+		},
+		{
+			"numero": "9076",
+			"razon_social": "SISTEMA AUTOMOTRIZ DE EXELENCIA, S.A. DE C.V",
+			"direccion": "CALZADA TULYEHUALCO # 111 COL. SANTA ISABEL INDUSTRIAL",
+			"delegacion": "IZTAPALAPA",
+			"telefonos": "56461958 56461961",
+			"latitud": "19.3523",
+			"lon": "-99.1052",
+			"id": 73
+		},
+		{
+			"numero": "9077",
+			"razon_social": "CENTRO DE VERIFICACI\u00d3N ZARATE, S.A.DE C.V.",
+			"direccion": "AVENIDA TOLUCA # 147, COL. OLIVAR DE LOS PADRES",
+			"delegacion": "ALVARO OBREGON",
+			"telefonos": "55 95 53 63",
+			"latitud": "19.3412",
+			"lon": "-99.2073",
+			"id": 74
+		},
+		{
+			"numero": "9078",
+			"razon_social": "VERIFICACI\u00d3N INTEGRAL DE EMISIONES, S.A. DE C.V.",
+			"direccion": "CENTEOTL # 267-D COL. FRACC. INDUSTRIAL SAN ANTONIO",
+			"delegacion": "AZCAPOTZALCO",
+			"telefonos": "52207532 552707533",
+			"latitud": "19.479",
+			"lon": "-99.1959",
+			"id": 75
+		},
+		{
+			"numero": "9079",
+			"razon_social": "numero MALTRATA, S.A. DE C.V.",
+			"direccion": "CUMBRES DE MALTRATA PONIENTE # 422, COL. NARVARTE",
+			"delegacion": "BENITO JUAREZ",
+			"telefonos": "56820258 56820133",
+			"latitud": "19.3887",
+			"lon": "-99.1484",
+			"id": 76
+		},
+		{
+			"numero": "9080",
+			"razon_social": "ECOLOGIA AMBIENTAL COPILCO, S.A. DE C.V.",
+			"direccion": "CALZ. VALLEJO # 1801, COL. SAN JOS\u00c9 DE LA ESCALERA",
+			"delegacion": "GUSTAVO A. MADERO",
+			"telefonos": "53895810 53895814",
+			"latitud": "19.5248",
+			"lon": "-99.1669",
+			"id": 77
+		},
+		{
+			"numero": "9081",
+			"razon_social": "GRUPO VERICAM, S.A. DE C.V.",
+			"direccion": "AV. RIO MIXCOAC # 343, COL. AXOTLA",
+			"delegacion": "ALVARO OBREGON",
+			"telefonos": "56617597 56625302",
+			"latitud": "19.3598",
+			"lon": "-99.1726",
+			"id": 78
+		},
+		{
+			"numero": "9082",
+			"razon_social": "CONTROL AMBIENTAL DEL VALLE DE MEXICO, S.A. DE C.V.",
+			"direccion": "CALZ. ERMITA IZTAPALAPA # 1891-A, COL. BARRIO LOS ANGELES",
+			"delegacion": "IZTAPALAPA",
+			"telefonos": "59708889 59708883",
+			"latitud": "19.3496",
+			"lon": "-99.0724",
+			"id": 79
+		},
+		{
+			"numero": "9083",
+			"razon_social": "INGENIERIA Y VERIFICACION PANTITLAN S.A. DE C.V.",
+			"direccion": "AV. PROSPERIDAD # 220 COL. PANTITLAN",
+			"delegacion": "IZTACALCO",
+			"telefonos": "57008665 24569330",
+			"latitud": "19.4194",
+			"lon": "-99.0575",
+			"id": 80
+		},
+		{
+			"numero": "9091",
+			"razon_social": "SISTEMA DE AGUAS DE LA CIUDAD DE MEXICO",
+			"direccion": "AV. CANAL DE APATLACO # 502 COL. CARLOS ZAPATA VELA",
+			"delegacion": "IZTACALCO",
+			"telefonos": "56495945",
+			"latitud": "19.3801",
+			"lon": "-99.1008",
+			"id": 81
+		}
+	]
+}

@@ -1,13 +1,17 @@
-$(document).on('pageshow',"#placas",function(event){
+$(document).on('pageshow',"#consulta-placas",function(event){
 	$.mobile.loading('show');	
 	if(typeof(Storage)!=='undefined') {
-		placas = localStorage.placas;
+		if(localStorage.placas !=='undefined') {
+			placas = localStorage.placas; 
+		} else {
+		console.log( 'Err0r! Numero de placas undefined');
+		}
     } else {
 		console.log( 'Err0r! Storage undefined');
 	}
     var mostrarResultados = function(consultaJson) {
-        $('#placas').html(placas);
-        vehiculo = consultaJson['vehiculo'];
+		vehiculo = consultaJson['vehiculo'];
+        $('#placas').html(vehiculo['placas']);
         $('#modelo').html(vehiculo['modelo']);
         $('#numero-cilindros').html(vehiculo['']);
         if(vehiculo['procedencia_nacional'] == true) {

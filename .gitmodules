@@ -1,3 +1,3 @@
-[submodule "transito-df-api"]
-	path = transito-df-api
-	url = https://github.com/mexicapis/transito-df-api
+[submodule "api"]
+	path = api
+	url = git@github.com:mexicapis/transito-df-api.git

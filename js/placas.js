@@ -14,11 +14,7 @@ $(document).on('pageshow',"#consulta-placas",function(event){
         $('#placas').html(vehiculo['placas']);
         $('#modelo').html(vehiculo['modelo']);
         $('#numero-cilindros').html(vehiculo['']);
-        if(vehiculo['procedencia_nacional'] == true) {
-            $('#procedencia').html('Nacional');
-        } else {
-            $('#procedencia').html('Extranjera');
-        }
+        $('#procedencia').html(vehiculo['procedencia']);
         $('#valor-factura').html(vehiculo['valor_factura']);
         $('#clave-vehicular').html(vehiculo['clave_vehicular']);
         $('#fecha-factura').html(vehiculo['fecha_factura']);
@@ -31,7 +27,7 @@ $(document).on('pageshow',"#consulta-placas",function(event){
         if(adeudosTenencia.length > 0) {
             for (i = 0; i < adeudosTenencia.length; i++) {
                 var adeudo = adeudosTenencia[i];
-                var divAdeudo = '<div class="bg-info cuadro-info"> \
+                var divAdeudo = '<div class="cuadro-info"> \
                 <span class="titulo">Año: </span> \
                 <span>'+adeudo['anio']+'</span></br> \
                 <span class="titulo">Impuesto: </span> \
@@ -56,7 +52,7 @@ $(document).on('pageshow',"#consulta-placas",function(event){
                 if(infraccion['pagada'] == true) {
                     textoPagada = 'Sí';
                 }
-                var divInfraccion = '<div class="bg-info cuadro-info"> \
+                var divInfraccion = '<div class="cuadro-info"> \
                 <span class="titulo">Folio: </span><span>'+infraccion['folio']+'</span></br> \
 				<span class="titulo">Fecha: </span><span>'+infraccion['fecha']+'</span></br> \
 				<span class="titulo">Pagada: </span><span>'+textoPagada+'</span></br> \
@@ -70,11 +66,11 @@ $(document).on('pageshow',"#consulta-placas",function(event){
         $('.cacao').autoNumeric('init', {aSign: '$ '});
         //console.log(consultaJson);
     };
-    var mostrarError = function( req, status, err ) {
+    var mostrarError = function(req, status, err) {
         console.log( 'Err0r!', status, err );
     };
     var ajaxOptions = {
-        url: 'api/index.php/transitodf/vehiculos/'+placas,
+        url: URL_API + '/vehiculos/' + placas,
         dataType: 'json',
         success: mostrarResultados,
         error: mostrarError

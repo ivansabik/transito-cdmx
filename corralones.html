@@ -1,34 +1,15 @@
-<!DOCTYPE html>
-<html lang="es">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Consultas Tránsito DF</title>
-        <link href="/app/css/bootstrap.min.css" rel="stylesheet">
-        <link href="/app/css/estilo.css" rel="stylesheet">
-    </head>
-    <body>
-        <div class="container">
-            <h1 class="texto-logo centrado"><img src="/app/img/kaeffer.png"> Tránsito DF</h1>
-            <button class="btn btn-lg btn-primary btn-block" id="ver-corralones-cercanos">Cercanos a mi ubicación</button>
-            <button class="btn btn-lg btn-primary btn-block" id="ver-corralones-todos">Todos</button>
-            <div id="error" class="invisible"></div>
-            <div class="invisible" id="lista-corralones">
-                <div class="bg-info cuadro-info">
-                    <p class="titulo centrado">Nombre</p>
-                    <span class="titulo">Dirección: </span><span id="placas"></span></br>
-                    <span class="titulo">Delegación: </span><span id="modelo"></span></br>
-                    <span class="titulo">Teléfono: </span><span id="numero-cilindros"></span></br>
-                    <div class="centrado">
-                        <button class="btn btn-danger centrado" id="ver-corralones-cercanos">Ver en mapa</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    <script src="/app/js/jquery.min.js"></script>
-    <script src="/app/js/bootstrap.min.js"></script>
-    <script src="/app/js/corralones.js"></script>
-    <script src="/app/js/jquery.fittext.js"></script>
-    </body>
-</html>
+<div data-role="page" id="consulta-corralones">
+	<div data-role="header" class="centrado" id="logo">
+		<img src="img/kaeffer.png"> <span>Tránsito DF</span>
+	</div>
+	<div data-role="content">
+        <button class="button" id="ver-corralones-cercanos">Cercanos a mi ubicación</button>
+		<button class="button" id="ver-corralones-todos">Todos</button>
+		<p></p>
+		<div id="lista-corralones" class="centrado"></div>
+	</div>
+</div>
+	<div data-role="footer" class="footer centrado">
+		<p>Mandros labs | github.com/mandroslabs</p>
+	</div>
+</div>

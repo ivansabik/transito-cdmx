@@ -1,13 +1,28 @@
-$(document).on('pageshow',"#consulta-corralones",function(event){
-	$.getJSON('/json/corralones.json',function(corralonesJson){
-		$('#ver-corralones-cercanos').click(function(){
-			$('#lista-corralones').empty();
+$(document).on('pageshow','#lista-corralones',function(event){
+	if(typeof(Storage) !== 'undefined') {
+		var corralones = JSON.parse(localStorage.corralones);
+	}
+	for (i = 0; i < corralones.length; i++) {
+		var corralon = corralones[i];
+		var divCorralon = '<div class="cuadro-info"> \
+		<p class="titulo">'+corralon['nombre']+'</p> \
+		<span class="titulo">Dirección: </span><span>'+corralon['direccion']+'</span></br> \
+		<span class="titulo">Delegación: </span><span>'+corralon['delegacion']+'</span></br> \
+		<span class="titulo">Teléfono: </span><a href="tel:'+corralon['telefono']+'">'+corralon['telefono']+'</a></br> \
+		</div></br>';
+		$('#corralones').append(divCorralon);
+	}
+});
+
+$(document).on('pageshow','#menu-corralones',function(event){
+	$('#ver-corralones-cercanos').click(function(){		
+		$.getJSON('/json/corralones.json',function(corralonesJson){
 			if (navigator.geolocation) {
 				navigator.geolocation.getCurrentPosition(exitoCoordenadas, errorCoordenadas);
 			} else {
 				errorGeolocalizacion();
 			}
-			
+
 			function exitoCoordenadas(location) {
 				var corralonesCercanos = corralonesJson['corralones'];
 				for (i = 0; i < corralonesCercanos.length; i++) {
@@ -15,36 +30,24 @@ $(document).on('pageshow',"#consulta-corralones",function(event){
 					corralon['distancia'] = obtenerDistancia(location.coords.latitude, location.coords.longitude, corralon['latitud'], corralon['longitud']);
 				}
 				corralonesCercanos = corralonesCercanos.sort(compararDistancia).slice(0, NUM_MAX_RES);
-				for (i = 0; i < corralonesCercanos.length; i++) {
-					var corralon = corralonesCercanos[i];
-					var divCorralon = '<div class="cuadro-info"> \
-					<p class="titulo">'+corralon['nombre']+'</p> \
-					<span class="titulo">Dirección: </span><span>'+corralon['direccion']+'</span></br> \
-					<span class="titulo">Delegación: </span><span>'+corralon['delegacion']+'</span></br> \
-					<span class="titulo">Teléfono: </span><a href="tel:'+corralon['telefono']+'">'+corralon['telefono']+'</a></br> \
-					</div></br>';
-					$('#lista-corralones').append(divCorralon);
+				if(typeof(Storage) !== 'undefined') {
+					localStorage.corralones = JSON.stringify(corralonesCercanos); 
 				}
+				$.mobile.changePage('corralones-listado.html');
 			}
-		});
-		
-		$('#ver-corralones-todos').click(function(){
-			var corralones = corralonesJson['corralones'];
-			$('#lista-corralones').empty();
-			for (i = 0; i < corralones.length; i++) {
-				var corralon = corralones[i];
-				var divCorralon = '<div class="cuadro-info"> \
-				<p class="titulo">'+corralon['nombre']+'</p> \
-				<span class="titulo">Dirección: </span><span>'+corralon['direccion']+'</span></br> \
-				<span class="titulo">Delegación: </span><span>'+corralon['delegacion']+'</span></br> \
-				<span class="titulo">Teléfono: </span><a href="tel:'+corralon['telefono']+'">'+corralon['telefono']+'</a></br> \
-				</div></br>';
-				$('#lista-corralones').append(divCorralon);
-			}
-		});
-		
+		});		
 	});
-    
+	
+	$('#ver-corralones-todos').click(function(){
+		$.getJSON('/json/corralones.json',function(corralonesJson){
+			var corralones = corralonesJson['corralones'];
+			if(typeof(Storage) !== 'undefined') {
+				localStorage.corralones = JSON.stringify(corralones); 
+			}
+			$.mobile.changePage('corralones-listado.html');
+		});
+	});
+		    
 	function errorCoordenadas() {
 		console.log( 'Err0r! Obtener coordenadas geolocalización');
 	}

@@ -1,5 +1,5 @@
-$(document).on('pageshow',"#index",function(event){
-	if(typeof(Storage)!=='undefined') {
+$(document).on('pageshow','#index',function(event){
+	if(typeof(Storage) !== 'undefined') {
 		if(localStorage.placas !=='undefined') {
 			placas = localStorage.placas; 
 			$('#input-placas').val(placas);

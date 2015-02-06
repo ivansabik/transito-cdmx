@@ -1,5 +1,5 @@
-$(document).on('pageshow',"#consulta-placas",function(event){
-	$.mobile.loading('show');	
+$(document).on('pageshow','#consulta-placas',function(event){
+	$.mobile.loading('show');
 	if(typeof(Storage)!=='undefined') {
 		if(localStorage.placas !=='undefined') {
 			placas = localStorage.placas; 
@@ -10,19 +10,21 @@ $(document).on('pageshow',"#consulta-placas",function(event){
 		console.log( 'Err0r! Storage undefined');
 	}
     var mostrarResultados = function(consultaJson) {
-		vehiculo = consultaJson['vehiculo'];
-        $('#placas').html(vehiculo['placas']);
-        $('#modelo').html(vehiculo['modelo']);
-        $('#numero-cilindros').html(vehiculo['']);
-        $('#procedencia').html(vehiculo['procedencia']);
-        $('#valor-factura').html(vehiculo['valor_factura']);
-        $('#clave-vehicular').html(vehiculo['clave_vehicular']);
-        $('#fecha-factura').html(vehiculo['fecha_factura']);
-        $('#rfc').html(vehiculo['rfc']);
-        $('#depreciacion').html(vehiculo['depreciacion']);
-        $('#total-adeudos').html(vehiculo['total_adeudos']);
-        $('#info-consulta').css('visibility','visible');
-        $.mobile.loading( 'hide');
+		vehiculo = consultaJson['vehiculo']; 
+		       
+        var divInfoGeneral = '<div class="cuadro-info"> \
+        <span class="titulo">Placas: </span><span>'+vehiculo['placas']+'</span></br> \
+		<span class="titulo">Modelo: </span><span>'+vehiculo['modelo']+'</span></br> \
+		<span class="titulo">Procedencia: </span><span>'+vehiculo['procedencia']+'</span></br> \
+		<span class="titulo">Valor factura: </span><span class="cacao">'+vehiculo['valor_factura']+'</span></br> \
+		<span class="titulo">Clave vehicular: </span><span>'+vehiculo['clave_vehicular']+'</span></br> \
+		<span class="titulo">Fecha factura: </span><span>'+vehiculo['fecha_factura']+'</span></br> \
+		<span class="titulo">RFC: </span><span>'+vehiculo['rfc']+'</span></br> \
+		<span class="titulo">Monto depreciación: </span><span class="cacao">'+vehiculo['depreciacion']+'</span></br> \
+		<span class="titulo">Total adeudos: </span><span class="cacao">'+vehiculo['total_adeudos']+'</span> \
+		</div></br>';
+		$('#info-general').html(divInfoGeneral);
+		
         var adeudosTenencia = vehiculo['adeudos_tenencia']
         if(adeudosTenencia.length > 0) {
             for (i = 0; i < adeudosTenencia.length; i++) {
@@ -43,7 +45,10 @@ $(document).on('pageshow',"#consulta-placas",function(event){
                 </div></br>';
                 $('#adeudos-tenencia').append(divAdeudo);
             }
-        }
+        } else {
+			$('#adeudos-tenencia').html('<p>Sin adeudos de tenencia</p>');
+		}
+        
         var infraciones = vehiculo['infracciones']
         if(infraciones.length > 0) {
             for (i = 0; i < infraciones.length; i++) {
@@ -62,9 +67,12 @@ $(document).on('pageshow',"#consulta-placas",function(event){
                 </div></br>';
                 $('#infracciones').append(divInfraccion);
             }
-        }
+        } else {
+			$('#infracciones').html('<p>Sin infracciones</p>');
+		}
         $('.cacao').autoNumeric('init', {aSign: '$ '});
-        //console.log(consultaJson);
+        $('#consulta').css('visibility','visible');
+        $.mobile.loading('hide');
     };
     var mostrarError = function(req, status, err) {
         console.log( 'Err0r!', status, err );

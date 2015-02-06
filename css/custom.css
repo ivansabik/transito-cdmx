@@ -23,6 +23,8 @@ body * {
 
 .centrado {
   text-align: center;
+  margin:0 auto;
+  display:block;
 }
 
 #logo span{
@@ -39,12 +41,12 @@ input.centrado {
 }
 
 .ui-header {
-	font-size: 2em;
-	padding-top: 20px;
+  font-size: 2em;
+  padding-top: 20px;
 }
 
 input[type=text] {
-    text-transform:uppercase;
+  text-transform:uppercase;
 }
 
 body .ui-body-a, body .ui-overlay-a {
@@ -56,12 +58,12 @@ body .ui-body-a, body .ui-overlay-a {
 }
 
 .cuadro-info {
-text-align: left;
-padding: 2%;
-border-radius: 20px;
-background-color: #d9edf7;
-box-sizing: border-box;
-display: block;
+  text-align: left;
+  padding: 2%;
+  border-radius: 20px;
+  background-color: #d9edf7;
+  box-sizing: border-box;
+  display: block;
 }
 
 .titulo {

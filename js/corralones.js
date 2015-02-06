@@ -5,12 +5,15 @@ $(document).on('pageshow','#lista-corralones',function(event){
 	for (i = 0; i < corralones.length; i++) {
 		var corralon = corralones[i];
 		var divCorralon = '<div class="cuadro-info"> \
-		<p class="titulo">'+corralon['nombre']+'</p> \
+		<h4>'+corralon['nombre']+'</h4> \
 		<span class="titulo">Dirección: </span><span>'+corralon['direccion']+'</span></br> \
 		<span class="titulo">Delegación: </span><span>'+corralon['delegacion']+'</span></br> \
-		<span class="titulo">Teléfono: </span><a href="tel:'+corralon['telefono']+'">'+corralon['telefono']+'</a></br> \
+		<span class="titulo">Teléfono: </span>'+corralon['telefono']+'</span></br> \
+		<p><a href="tel:'+corralon['telefono']+'"><button data-role="button" data-icon="phone">Llamar</button></a></p> \
+		<p><button data-role="button" data-icon="location">Ver en mapa</button></p> \
+		<p><button data-role="button" data-icon="navigation">¿Cómo llegar?</button></p> \
 		</div></br>';
-		$('#corralones').append(divCorralon);
+		$('#corralones').append(divCorralon).trigger('create');
 	}
 });
 

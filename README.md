@@ -11,3 +11,8 @@ App que proporciona info de automóviles del DF como infracciones, adeudos de te
 
 ### Corralones
 <img src="https://raw.githubusercontent.com/mandroslabs/transito-df/master/doc/3.png">
+
+### Build Android
+
+```honegap build android -d```
+

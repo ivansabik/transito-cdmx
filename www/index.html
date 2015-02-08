@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+<head>
+	<title>Tránsito DF</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="css/jquery.mobile-1.4.0.min.css" />
+	<link rel="stylesheet" href="css/themes/transito-df.css" />
+    <link rel="stylesheet" href="css/themes/jquery.mobile.icons.min.css" />
+	<link rel="stylesheet" href="css/custom.css" />
+	<script src="js/jquery-1.10.2.js"></script>
+	<script src="js/mobileinit.js"></script>
+	<script src="js/jquery.mobile-1.4.0.js"></script>
+	<script src="js/config.js"></script>
+	<script src="js/home.js"></script>
+	<script src="js/error.js"></script>
+	<script src="js/autoNumeric.js"></script>
+	<script src="js/placas.js"></script>
+	<script src="js/corralones.js"></script>
+	<script src="js/verificentros.js"></script>
+</head>
+<body>
+	<div data-role="page" id="index">
+		<div data-role="header" class="centrado" id="logo">
+			<img src="img/kaeffer.png"> <span>Tránsito DF</span>
+		</div>
+		<div data-role="content">
+			<div class="form-group">
+				<input type="text" class="centrado" id="input-placas" placeholder="Placas, ej. 999ZZZ" maxlength="6">
+                <p>
+                    <button class="button" id="consultar-placas" data-ajax="false">Consultar placas</button>
+				</p>
+				<p>
+					<button class="button" id="consultar-corralones">Corralones</button>
+				</p>
+				<p>
+					<button class="button" id="consultar-verificentros">Verificentros</button>
+				</p>
+			</div> 
+		</div>
+		<div data-role="footer" class="footer centrado">
+			<p>Mandros labs | github.com/mandroslabs</p>
+		</div>
+	</div>
+</body>
+</html>

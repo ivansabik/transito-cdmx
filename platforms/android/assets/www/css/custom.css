@@ -1,0 +1,84 @@
+@-webkit-keyframes spin2 {
+  from { -webkit-transform: rotate(0deg);}
+  to { -webkit-transform: rotate(360deg);}
+}
+
+@keyframes spin {
+  from { transform: scale(1) rotate(0deg);}
+  to { transform: scale(1) rotate(360deg);}
+}
+
+/* latin */
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Montserrat-Regular'), url(themes/montserrat.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+}
+
+body * {
+  font-family: 'Montserrat', sans-serif;
+}
+
+.centrado {
+  text-align: center;
+  margin:0 auto;
+  display:block;
+}
+
+#logo span{
+  font-size: 40px;
+}
+
+input.centrado {
+  text-align: center;
+}
+
+.ui-btn-up-a,.ui-btn-hover-a,.ui-btn-down-a,.ui-bar-a,.ui-body-a,.ui-btn-up-a,.ui-btn-hover-a,.ui-btn-down-a,.ui-body-a input,.ui-body-a select,.ui-body-a textarea,.ui-body-a$ {
+  font-family: "RobotoRegular";
+    text-transform:uppercase;
+}
+
+.ui-header {
+  font-size: 2em;
+  padding-top: 20px;
+}
+
+input[type=text] {
+  text-transform:uppercase;
+}
+
+body .ui-body-a, body .ui-overlay-a {
+  text-shadow:0 0 0;
+}
+
+.invisible {
+  visibility: hidden;
+}
+
+.cuadro-info {
+  text-align: left;
+  padding: 2%;
+  border-radius: 20px;
+  background-color: #d9edf7;
+  box-sizing: border-box;
+  display: block;
+}
+
+.titulo {
+  font-size: 18px;
+}
+
+.footer {
+  font-size: 10px;
+}
+
+.cuadro-error {
+  text-align: left;
+  padding: 2%;
+  border-radius: 20px;
+  background-color: #f2dede;
+  box-sizing: border-box;
+  display: block;
+}

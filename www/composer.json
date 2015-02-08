@@ -1,8 +1,0 @@
-{
-    "require": {
-        "sunra/php-simple-html-dom-parser": "v1.5.0",
-        "php-curl-class/php-curl-class": "2.1.0",
-        "camspiers/json-pretty": "1.0.0",
-        "luracast/restler": "3.0.0"
-    }
-}

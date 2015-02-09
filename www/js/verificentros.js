@@ -45,9 +45,9 @@ $(document).on('pageshow','#menu-verificentros',function(event){
 		$.getJSON(PATH + 'json/verificentros.json',function(verificentrosJson){
 			var verificentros = verificentrosJson['verificentros'];
 			if(typeof(Storage) !== 'undefined') {
-				localStorage.verificentros = JSON.stringify(verificentros); 
+				localStorage.verificentros = JSON.stringify(verificentros);
+				$.mobile.changePage('verificentros-listado.html');
 			}
-			$.mobile.changePage('verificentros-listado.html');
 		});
 	});
 		    
@@ -56,7 +56,6 @@ $(document).on('pageshow','#menu-verificentros',function(event){
 			localStorage.msjError = 'Err0r! Obtener coordenadas geolocalización'; 
 			$.mobile.changePage('error.html');
 		}
-		console.log( );
 	}
 	function errorGeolocalizacion() {
 		if(typeof(Storage) !== 'undefined') {

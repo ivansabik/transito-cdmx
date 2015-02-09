@@ -14,5 +14,5 @@ App que proporciona info de automóviles del DF como infracciones, adeudos de te
 
 ### Build Android
 
-```honegap build android -d```
+```phonegap build android -d```
 

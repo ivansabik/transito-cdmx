@@ -1,4 +1,5 @@
 vendor
+platforms
 composer.phar
 composer.lock
 *~

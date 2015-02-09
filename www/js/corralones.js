@@ -35,8 +35,8 @@ $(document).on('pageshow','#menu-corralones',function(event){
 				corralonesCercanos = corralonesCercanos.sort(compararDistancia).slice(0, NUM_MAX_RES);
 				if(typeof(Storage) !== 'undefined') {
 					localStorage.corralones = JSON.stringify(corralonesCercanos); 
+					$.mobile.changePage('corralones-listado.html');
 				}
-				$.mobile.changePage('corralones-listado.html');
 			}
 		});		
 	});
@@ -46,8 +46,8 @@ $(document).on('pageshow','#menu-corralones',function(event){
 			var corralones = corralonesJson['corralones'];
 			if(typeof(Storage) !== 'undefined') {
 				localStorage.corralones = JSON.stringify(corralones); 
+				$.mobile.changePage('corralones-listado.html');
 			}
-			$.mobile.changePage('corralones-listado.html');
 		});
 	});
 		    
@@ -56,7 +56,6 @@ $(document).on('pageshow','#menu-corralones',function(event){
 			localStorage.msjError = 'Err0r! Obtener coordenadas geolocalización'; 
 			$.mobile.changePage('error.html');
 		}
-		console.log( );
 	}
 	function errorGeolocalizacion() {
 		if(typeof(Storage) !== 'undefined') {

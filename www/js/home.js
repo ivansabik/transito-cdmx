@@ -10,7 +10,11 @@ $(document).on('pageshow','#index',function(event){
         var placas = $('#input-placas').val().toUpperCase();
         
         if(placas.length != 6){
-			alert('Placas inválidas');
+			if(navigator.notification == undefined) {
+				alert('Placas inválidas');
+			} else {
+				navigator.notification.alert('Placas inválidas',function(){},'Oh ooooh','Ok');
+			}
 			return false;
 		}
         

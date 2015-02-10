@@ -73,8 +73,12 @@ $(document).on('pageshow','#consulta-placas',function(event){
         $('#consulta').css('visibility','visible');
         $.mobile.loading('hide');
     };
-    var mostrarError = function(req, status, err) {
-		alert('Err0r!');
+    var mostrarError = function(req, status, err) {		
+		if(navigator.notification != undefined) {
+			alert('Err0r!');
+		} else {
+			navigator.notification.alert('Err0r!',function(){},'Oh ooooh','Ok');
+		}
 		parent.history.back();
 		return false;
     };

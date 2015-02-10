@@ -59,13 +59,21 @@ $(document).on('pageshow','#menu-verificentros',function(event){
 		    
 	function errorCoordenadas() {
 		$.mobile.loading('hide');
-		alert('Err0r! Obtener coordenadas geolocalización');
+		if(navigator.notification == undefined) {
+			alert('Err0r! Obtener coordenadas geolocalización');
+		} else {
+			navigator.notification.alert('Err0r! Obtener coordenadas geolocalización',function(){},'Oh ooooh','Ok');
+		}
 		return false;
 	}
 	
 	function errorGeolocalizacion() {
 		$.mobile.loading('hide');
-		alert('Err0r! Error geolocalización!');
+		if(navigator.notification == undefined) {
+			alert('Err0r! Error geolocalización!');
+		} else {
+			navigator.notification.alert('Err0r! Error geolocalización!',function(){},'Oh ooooh','Ok');
+		}
 		return false;
 	}
 	

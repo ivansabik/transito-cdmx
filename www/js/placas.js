@@ -1,17 +1,13 @@
 $(document).on('pageshow','#consulta-placas',function(event){
-	//$.support.cors=true;
-    //$.mobile.allowCrossDomainPages = true;
-    
 	$.mobile.loading('show');
 	if(typeof(Storage)!=='undefined') {
 		if(localStorage.placas !=='undefined') {
 			placas = localStorage.placas; 
 		} else {
-		console.log( 'Err0r! Numero de placas undefined');
+			alert( 'Err0r! Numero de placas undefined');
+			return false;
 		}
-    } else {
-		console.log( 'Err0r! Storage undefined');
-	}
+    }
     var mostrarResultados = function(consultaJson) {
 		vehiculo = consultaJson['vehiculo']; 
 		       
@@ -78,10 +74,9 @@ $(document).on('pageshow','#consulta-placas',function(event){
         $.mobile.loading('hide');
     };
     var mostrarError = function(req, status, err) {
-		if(typeof(Storage) !== 'undefined') {
-			localStorage.msjError = 'Err0r!'; 
-			$.mobile.changePage('error.html');
-		}
+		alert('Err0r!');
+		parent.history.back();
+		return false;
     };
     var ajaxOptions = {
         url: URL_API + '/vehiculos/' + placas,

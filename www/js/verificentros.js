@@ -58,16 +58,15 @@ $(document).on('pageshow','#menu-verificentros',function(event){
 	});
 		    
 	function errorCoordenadas() {
-		if(typeof(Storage) !== 'undefined') {
-			localStorage.msjError = 'Err0r! Obtener coordenadas geolocalización'; 
-			$.mobile.changePage('error.html');
-		}
+		$.mobile.loading('hide');
+		alert('Err0r! Obtener coordenadas geolocalización');
+		return false;
 	}
+	
 	function errorGeolocalizacion() {
-		if(typeof(Storage) !== 'undefined') {
-			localStorage.msjError = 'Err0r! Error geolocalización!'; 
-			$.mobile.changePage('error.html');
-		}
+		$.mobile.loading('hide');
+		alert('Err0r! Error geolocalización!');
+		return false;
 	}
 	
 	function obtenerDistancia(lat1, lon1, lat2, lon2) {

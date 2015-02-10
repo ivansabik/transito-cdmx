@@ -5,19 +5,20 @@ $(document).on('pageshow','#index',function(event){
 			$('#input-placas').val(placas);
 		}
 	}
-        
-	$('#logo').click(function(){
-        $.mobile.changePage('index.html');
-    });
     
     $('#consultar-placas').click(function(){
         var placas = $('#input-placas').val().toUpperCase();
+        
+        if(placas.length != 6){
+			alert('Placas inválidas');
+			return false;
+		}
+        
         if(typeof(Storage)!=='undefined') {
-			localStorage.placas=placas;            
+			localStorage.placas=placas;        
+			$.mobile.changePage('placas.html');    
         }
-        $.mobile.changePage('placas.html');
     });
-    
     
 	$('#consultar-corralones').click(function(){
         $.mobile.changePage('corralones.html');

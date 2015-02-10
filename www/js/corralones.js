@@ -60,17 +60,14 @@ $(document).on('pageshow','#menu-corralones',function(event){
 		    
 	function errorCoordenadas() {
 		$.mobile.loading('hide');
-		if(typeof(Storage) !== 'undefined') {
-			localStorage.msjError = 'Err0r! Obtener coordenadas geolocalización'; 
-			$.mobile.changePage('error.html');
-		}
+		alert('Err0r! Obtener coordenadas geolocalización');
+		return false;
 	}
+	
 	function errorGeolocalizacion() {
 		$.mobile.loading('hide');
-		if(typeof(Storage) !== 'undefined') {
-			localStorage.msjError = 'Err0r! Error geolocalización!'; 
-			$.mobile.changePage('error.html');
-		}
+		alert('Err0r! Error geolocalización!');
+		return false;
 	}
 	
 	function obtenerDistancia(lat1, lon1, lat2, lon2) {

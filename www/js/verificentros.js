@@ -10,20 +10,26 @@ $(document).on('pageshow','#lista-verificentros',function(event){
 		<span class="titulo">Delegación: </span><span>'+verificentro['delegacion']+'</span></br> \
 		<span class="titulo">Teléfono: </span>'+verificentro['telefono']+'</span></br> \
 		<p><a href="tel:'+verificentro['telefono']+'"><button data-role="button" data-icon="phone">Llamar</button></a></p> \
-		<p><button data-role="button" data-icon="location">Ver en mapa</button></p> \
-		<p><button data-role="button" data-icon="navigation">¿Cómo llegar?</button></p> \
+		<p><a href="#" onclick="window.open(\''+URL_GMAPS_MAPA+verificentro['latitud']+','+verificentro['longitud']+'\', \'_system\');"><button data-role="button" data-icon="location">Ver en mapa</button></a></p> \
+		<p><a href="#" onclick="window.open(\''+URL_GMAPS_DIR+verificentro['latitud']+','+verificentro['longitud']+'\', \'_system\');"><button data-role="button" data-icon="navigation">¿Cómo llegar?</button></p> \
 		</div></br>';
 		$('#verificentros').append(divVerificentro).trigger('create');
 	}
+	$.mobile.loading('hide');
 });
 
 $(document).on('pageshow','#menu-verificentros',function(event){
 	$('#ver-verificentros-cercanos').click(function(){
+		$.mobile.loading('show');
 		$.getJSON(PATH + 'json/verificentros.json',function(verificentrosJson){
 			if (navigator.geolocation) {
-				navigator.geolocation.getCurrentPosition(exitoCoordenadas, errorCoordenadas);
+				navigator.geolocation.getCurrentPosition(exitoCoordenadas, coordenadasNativo, { enableHighAccuracy: false, timeout: 60*1000, maximumAge: 1000*60*10 });
 			} else {
 				errorGeolocalizacion();
+			}
+			
+			function coordenadasNativo() {
+				navigator.geolocation.getCurrentPosition(exitoCoordenadas, errorCoordenadas, { enableHighAccuracy: true, timeout: 60*1000*2, maximumAge: 1000*60*10 });
 			}
 
 			function exitoCoordenadas(location) {
@@ -35,8 +41,8 @@ $(document).on('pageshow','#menu-verificentros',function(event){
 				verificentrosCercanos = verificentrosCercanos.sort(compararDistancia).slice(0, NUM_MAX_RES);
 				if(typeof(Storage) !== 'undefined') {
 					localStorage.verificentros = JSON.stringify(verificentrosCercanos); 
+					$.mobile.changePage('verificentros-listado.html');
 				}
-				$.mobile.changePage('verificentros-listado.html');
 			}
 		});		
 	});

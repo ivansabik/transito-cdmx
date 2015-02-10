@@ -10,20 +10,26 @@ $(document).on('pageshow','#lista-corralones',function(event){
 		<span class="titulo">Delegación: </span><span>'+corralon['delegacion']+'</span></br> \
 		<span class="titulo">Teléfono: </span>'+corralon['telefono']+'</span></br> \
 		<p><a href="tel:'+corralon['telefono']+'"><button data-role="button" data-icon="phone">Llamar</button></a></p> \
-		<p><button data-role="button" data-icon="location">Ver en mapa</button></p> \
-		<p><button data-role="button" data-icon="navigation">¿Cómo llegar?</button></p> \
+		<p><a href="#" onclick="window.open(\''+URL_GMAPS_MAPA+corralon['latitud']+','+corralon['longitud']+'\', \'_system\');"><button data-role="button" data-icon="location">Ver en mapa</button></a></p> \
+		<p><a href="#" onclick="window.open(\''+URL_GMAPS_DIR+corralon['latitud']+','+corralon['longitud']+'\', \'_system\');"><button data-role="button" data-icon="navigation">¿Cómo llegar?</button></p> \
 		</div></br>';
 		$('#corralones').append(divCorralon).trigger('create');
 	}
+	$.mobile.loading('hide');
 });
 
 $(document).on('pageshow','#menu-corralones',function(event){
 	$('#ver-corralones-cercanos').click(function(){
+		$.mobile.loading('show');
 		$.getJSON(PATH + 'json/corralones.json',function(corralonesJson){
 			if (navigator.geolocation) {
-				navigator.geolocation.getCurrentPosition(exitoCoordenadas, errorCoordenadas);
+				navigator.geolocation.getCurrentPosition(exitoCoordenadas, coordenadasNativo, { enableHighAccuracy: false, timeout: 60*1000, maximumAge: 1000*60*10 });
 			} else {
 				errorGeolocalizacion();
+			}
+			
+			function coordenadasNativo() {
+				navigator.geolocation.getCurrentPosition(exitoCoordenadas, errorCoordenadas, { enableHighAccuracy: true, timeout: 60*1000*2, maximumAge: 1000*60*10 });
 			}
 
 			function exitoCoordenadas(location) {
@@ -42,6 +48,7 @@ $(document).on('pageshow','#menu-corralones',function(event){
 	});
 	
 	$('#ver-corralones-todos').click(function(){
+		$.mobile.loading('show');
 		$.getJSON(PATH + 'json/corralones.json',function(corralonesJson){
 			var corralones = corralonesJson['corralones'];
 			if(typeof(Storage) !== 'undefined') {
@@ -52,12 +59,14 @@ $(document).on('pageshow','#menu-corralones',function(event){
 	});
 		    
 	function errorCoordenadas() {
+		$.mobile.loading('hide');
 		if(typeof(Storage) !== 'undefined') {
 			localStorage.msjError = 'Err0r! Obtener coordenadas geolocalización'; 
 			$.mobile.changePage('error.html');
 		}
 	}
 	function errorGeolocalizacion() {
+		$.mobile.loading('hide');
 		if(typeof(Storage) !== 'undefined') {
 			localStorage.msjError = 'Err0r! Error geolocalización!'; 
 			$.mobile.changePage('error.html');

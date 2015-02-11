@@ -74,11 +74,7 @@ $(document).on('pageshow','#consulta-placas',function(event){
         $.mobile.loading('hide');
     };
     var mostrarError = function(req, status, err) {		
-		if(navigator.notification != undefined) {
-			alert('Err0r!');
-		} else {
-			navigator.notification.alert('Err0r!',function(){},'Oh ooooh','Ok');
-		}
+		alert('Err0r!');
 		parent.history.back();
 		return false;
     };

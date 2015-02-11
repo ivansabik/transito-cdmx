@@ -44,7 +44,7 @@ $(document).on('pageshow','#menu-corralones',function(event){
 					$.mobile.changePage('corralones-listado.html');
 				}
 			}
-		});		
+		});	zz	
 	});
 	
 	$('#ver-corralones-todos').click(function(){
@@ -60,21 +60,13 @@ $(document).on('pageshow','#menu-corralones',function(event){
 		    
 	function errorCoordenadas() {
 		$.mobile.loading('hide');
-		if(navigator.notification == undefined) {
-			alert('Err0r! Obtener coordenadas geolocalización');
-		} else {
-			navigator.notification.alert('Err0r! Obtener coordenadas geolocalización',function(){},'Oh ooooh','Ok');
-		}
+		alert('Err0r! Obtener coordenadas geolocalización');
 		return false;
 	}
 	
 	function errorGeolocalizacion() {
 		$.mobile.loading('hide');
-		if(navigator.notification == undefined) {
-			alert('Err0r! Error geolocalización!');
-		} else {
-			navigator.notification.alert('Err0r! Error geolocalización!',function(){},'Oh ooooh','Ok');
-		}
+		alert('Err0r! Error geolocalización!');
 		return false;
 	}
 	

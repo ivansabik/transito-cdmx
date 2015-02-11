@@ -36,7 +36,7 @@ input.centrado {
 }
 
 .ui-btn-up-a,.ui-btn-hover-a,.ui-btn-down-a,.ui-bar-a,.ui-body-a,.ui-btn-up-a,.ui-btn-hover-a,.ui-btn-down-a,.ui-body-a input,.ui-body-a select,.ui-body-a textarea,.ui-body-a$ {
-  font-family: "RobotoRegular";
+	font-family: "RobotoRegular";
     text-transform:uppercase;
 }
 
@@ -81,4 +81,8 @@ body .ui-body-a, body .ui-overlay-a {
   background-color: #f2dede;
   box-sizing: border-box;
   display: block;
+}
+
+a {
+  text-decoration:none;
 }

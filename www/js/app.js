@@ -6,6 +6,7 @@ URL_GMAPS_MAPA = 'http://maps.google.com/maps?q=';
 URL_GMAPS_DIR = 'http://maps.google.com/maps?saddr=Current+Location&daddr=';
 URL_GMAPS_CORRALONES = 'http://goo.gl/K3YW7R';
 URL_GMAPS_VERIFICENTROS = 'http://goo.gl/4x9EtG';
+MAX_RADIO_CERCANAS = 5000;
 
 // Home
 $(document).on('pageshow', '#index', function () {
@@ -75,152 +76,53 @@ $(document).on('pageshow', '#consulta-placas', function () {
         error: mostrarError
     };
     if (Vehiculo.existeLocal(placas)) {
-        alert('Existen localmente no hay que hacer apicall!')
+        alert('Existen localmente no hay que hacer apicall!');
     } else {
         $.ajax(ajaxOptions);
     }
 });
 
-// Ver corralones cercanos
-$(document).on('pageshow', '#lista-corralones', function () {
-    var corralones = JSON.parse(localStorage.corralones);
-    for (i = 0; i < corralones.length; i++) {
-        var corralon = corralones[i];
-        $('#corralones').append(divCorralon).trigger('create');
-    }
-    $.mobile.loading('hide');
-});
-
 $(document).on('pageshow', '#menu-corralones', function () {
+    // Ver todos los corralones
+    // Ver corralones cercanos
     $('#ver-corralones-cercanos').click(function () {
-        $.mobile.loading('show');
-        $.getJSON(PATH + 'json/corralones.json', function (corralonesJson) {
-            if (navigator.geolocation) {
-                navigator.geolocation.getCurrentPosition(exitoCoordenadas, coordenadasNativo, {enableHighAccuracy: false, timeout: 60 * 1000, maximumAge: 1000 * 60 * 10});
-            } else {
-                errorGeolocalizacion();
-            }
-
-            function coordenadasNativo() {
-                navigator.geolocation.getCurrentPosition(exitoCoordenadas, errorCoordenadas, {enableHighAccuracy: true, timeout: 60 * 1000 * 2, maximumAge: 1000 * 60 * 10});
-            }
-
-            function exitoCoordenadas(location) {
-                var corralonesCercanos = corralonesJson['corralones'];
-                for (i = 0; i < corralonesCercanos.length; i++) {
-                    var corralon = corralonesCercanos[i];
-                    corralon['distancia'] = obtenerDistancia(location.coords.latitude, location.coords.longitude, corralon['latitud'], corralon['longitud']);
-                }
-                corralonesCercanos = corralonesCercanos.sort(compararDistancia).slice(0, NUM_MAX_RES);
-                if (typeof (Storage) !== 'undefined') {
-                    localStorage.corralones = JSON.stringify(corralonesCercanos);
-                    $.mobile.changePage('corralones-listado.html');
-                }
-            }
-        });
+        obtenerUbicacion();
     });
-
-    $('#ver-corralones-todos').click(function () {
-        $.mobile.loading('show');
-        $.getJSON(PATH + 'json/corralones.json', function (corralonesJson) {
-            var corralones = corralonesJson['corralones'];
-            if (typeof (Storage) !== 'undefined') {
-                localStorage.corralones = JSON.stringify(corralones);
-                $.mobile.changePage('corralones-listado.html');
-            }
-        });
-    });
+    // Ver corralones en mapa
 });
-// Ver todos los corralones
 
-// Ver corralones en mapa
-
-// Ver verificentros cercanos
-$(document).on('pageshow', '#lista-verificentros', function (event) {
-    if (typeof (Storage) !== 'undefined') {
-        var verificentros = JSON.parse(localStorage.verificentros);
-    }
-    for (i = 0; i < verificentros.length; i++) {
-        var verificentro = verificentros[i];
-
-        $('#verificentros').append(divVerificentro).trigger('create');
-    }
-    $.mobile.loading('hide');
+$(document).on('pageshow', '#menu-verificentros', function () {
+    // Ver todos los verificentros
+    // Ver verificentros cercanos
+    $('#ver-corralones-cercanos').click(function () {
+        obtenerUbicacion();
+    });
+    // Ver verificentros en mapa
 });
-$(document).on('pageshow', '#menu-verificentros', function (event) {
-    $('#ver-verificentros-cercanos').click(function () {
-        $.mobile.loading('show');
-        $.getJSON(PATH + 'json/verificentros.json', function (verificentrosJson) {
-            if (navigator.geolocation) {
-                navigator.geolocation.getCurrentPosition(exitoCoordenadas, coordenadasNativo, {enableHighAccuracy: false, timeout: 60 * 1000, maximumAge: 1000 * 60 * 10});
-            } else {
-                errorGeolocalizacion();
-            }
 
-            function coordenadasNativo() {
-                navigator.geolocation.getCurrentPosition(exitoCoordenadas, errorCoordenadas, {enableHighAccuracy: true, timeout: 60 * 1000 * 2, maximumAge: 1000 * 60 * 10});
-            }
+function obtenerUbicacion() {
+    if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(exitoCoordenadas, coordenadasNativo, {enableHighAccuracy: false, timeout: 60 * 1000, maximumAge: 1000 * 60 * 10});
+    } else {
+        errorGeolocalizacion();
+    }
 
-            function exitoCoordenadas(location) {
-                var verificentrosCercanos = verificentrosJson['verificentros'];
-                for (i = 0; i < verificentrosCercanos.length; i++) {
-                    var verificentro = verificentrosCercanos[i];
-                    verificentro['distancia'] = obtenerDistancia(location.coords.latitude, location.coords.longitude, verificentro['latitud'], verificentro['longitud']);
-                }
-                verificentrosCercanos = verificentrosCercanos.sort(compararDistancia).slice(0, NUM_MAX_RES);
-                if (typeof (Storage) !== 'undefined') {
-                    localStorage.verificentros = JSON.stringify(verificentrosCercanos);
-                    $.mobile.changePage('verificentros-listado.html');
-                }
-            }
-        });
-    });
-    $('#ver-verificentros-todos').click(function () {
-        $.getJSON(PATH + 'json/verificentros.json', function (verificentrosJson) {
-            var verificentros = verificentrosJson['verificentros'];
-            if (typeof (Storage) !== 'undefined') {
-                localStorage.verificentros = JSON.stringify(verificentros);
-                $.mobile.changePage('verificentros-listado.html');
-            }
-        });
-    });
+    function coordenadasNativo() {
+        navigator.geolocation.getCurrentPosition(exitoCoordenadas, errorCoordenadas, {enableHighAccuracy: true, timeout: 60 * 1000 * 2, maximumAge: 1000 * 60 * 10});
+    }
+
+    function exitoCoordenadas(location) {
+        var latitud = location.coords.latitude;
+        var longitud = location.coords.longitude;
+        // set ubicacion en local storage
+        alert(latitud + ',' + longitud);
+    }
+
     function errorCoordenadas() {
-        $.mobile.loading('hide');
         alert('Err0r! Obtener coordenadas geolocalización');
-        return false;
     }
 
     function errorGeolocalizacion() {
-        $.mobile.loading('hide');
         alert('Err0r! Error geolocalización!');
-        return false;
     }
-
-    function obtenerDistancia(lat1, lon1, lat2, lon2) {
-        var R = 6371;
-        var dLat = convertirRadianes(lat2 - lat1);
-        var dLon = convertirRadianes(lon2 - lon1);
-        lat1 = convertirRadianes(lat1);
-        lat2 = convertirRadianes(lat2);
-        var a = Math.sin(dLat / 2) * Math.sin(dLat / 2) +
-                Math.sin(dLon / 2) * Math.sin(dLon / 2) * Math.cos(lat1) * Math.cos(lat2);
-        var c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
-        var d = R * c;
-        return d
-    }
-
-    function convertirRadianes(numero) {
-        return numero * Math.PI / 180;
-    }
-
-    function compararDistancia(a, b) {
-        if (a.distancia < b.distancia)
-            return -1;
-        if (a.distancia > b.distancia)
-            return 1;
-        return 0;
-    }
-});
-// Ver todos los verificentros
-
-// Ver verificentros en mapa
+}

@@ -9,7 +9,7 @@ function Vehiculo(json) {
     this.depreciacion = json['vehiculo']['depreciacion'];
     this.totalAdeudos = json['vehiculo']['total_adeudos'];
     var infracciones = [];
-    for (i = 0; i < json['vehiculo']['infracciones'].length; i++) {
+    for (var i = 0; i < json['vehiculo']['infracciones'].length; i++) {
         var infraccion = new Infraccion();
         infraccion.folio = json['vehiculo']['infracciones'][i]['folio'];
         infraccion.fecha = json['vehiculo']['infracciones'][i]['fecha'];
@@ -21,7 +21,7 @@ function Vehiculo(json) {
     }
     this.infracciones = infracciones;
     var adeudos = [];
-    for (i = 0; i < json['vehiculo']['adeudos_tenencia'].length; i++) {
+    for (var i = 0; i < json['vehiculo']['adeudos_tenencia'].length; i++) {
         var adeudo = new Adeudo();
         adeudo.anio = json['vehiculo']['adeudos_tenencia'][i]['anio'];
         adeudo.totalImpuesto = json['vehiculo']['adeudos_tenencia'][i]['total_impuesto'];
@@ -65,6 +65,9 @@ function Vehiculo(json) {
         html += '</div></br>';
         return html;
     };
+
+    this.guardaLocal = function () {
+    }; // asigna ttl y guarda
 }
 
 // TODO: Regex para placas
@@ -74,9 +77,6 @@ Vehiculo.validaPlacas = function (placas) {
     }
     return true;
 };
-
-Vehiculo.guardaLocal = function () {
-}; // asigna ttl y guarda
 
 Vehiculo.existeLocal = function (placas) {
 }; // busca si está guardado
@@ -115,97 +115,26 @@ function Verificentro() {
     };
 }
 
-
-
-function Ubicacion() {
-    this.obtener = function () {
-        if (navigator.geolocation) {
-            navigator.geolocation.getCurrentPosition(exitoCoordenadas, coordenadasNativo, {enableHighAccuracy: false, timeout: 60 * 1000, maximumAge: 1000 * 60 * 10});
-        } else {
-            errorGeolocalizacion();
-        }
-
-        this._coordenadasNativo = function () {
-            navigator.geolocation.getCurrentPosition(exitoCoordenadas, errorCoordenadas, {enableHighAccuracy: true, timeout: 60 * 1000 * 2, maximumAge: 1000 * 60 * 10});
-        }
-
-        this._exitoCoordenadas = function (location) {
-            var verificentrosCercanos = verificentrosJson['verificentros'];
-            for (i = 0; i < verificentrosCercanos.length; i++) {
-                var verificentro = verificentrosCercanos[i];
-                verificentro['distancia'] = obtenerDistancia(location.coords.latitude, location.coords.longitude, verificentro['latitud'], verificentro['longitud']);
-            }
-            verificentrosCercanos = verificentrosCercanos.sort(compararDistancia).slice(0, NUM_MAX_RES);
-            if (typeof (Storage) !== 'undefined') {
-                localStorage.verificentros = JSON.stringify(verificentrosCercanos);
-                $.mobile.changePage('verificentros-listado.html');
-            }
-        }
-
-        this._errorCoordenadas = function () {
-            $.mobile.loading('hide');
-            alert('Err0r! Obtener coordenadas geolocalización');
-            return false;
-        }
-
-        this._errorGeolocalizacion = function () {
-            $.mobile.loading('hide');
-            alert('Err0r! Error geolocalización!');
-            return false;
-        }
-
-        this._obtenerDistancia = function (lat1, lon1, lat2, lon2) {
-            var R = 6371;
-            var dLat = convertirRadianes(lat2 - lat1);
-            var dLon = convertirRadianes(lon2 - lon1);
-            lat1 = convertirRadianes(lat1);
-            lat2 = convertirRadianes(lat2);
-            var a = Math.sin(dLat / 2) * Math.sin(dLat / 2) +
-                    Math.sin(dLon / 2) * Math.sin(dLon / 2) * Math.cos(lat1) * Math.cos(lat2);
-            var c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
-            var d = R * c;
-            return d
-        }
-
-        this._convertirRadianes = function (numero) {
-            return numero * Math.PI / 180;
-        }
-
-        this._compararDistancia = function (a, b) {
-            if (a.distancia < b.distancia)
-                return -1;
-            if (a.distancia > b.distancia)
-                return 1;
-            return 0;
-        }
-
-        this.guardaLocal = function () {
-        }; // asigna ttl y guarda
-
-        this.existeLocal = function () {
-        }; // busca si está guardado
-    };
-}
-
 function Adeudo() {
     this.toHtml = function () {
         var html = '<div class="cuadro-info"> \
                 <span class="titulo">Año: </span> \
-                <span>' + this.anio + '</span></br> \
-                <span class="titulo">Impuesto: </span> \
-                <span class="cacao">' + this.totalImpuesto + '</span></br> \
+        <span>' + this.anio + '</span></br> \
+        <span class="titulo">Impuesto: </span> \
+            <span class="cacao">' + this.totalImpuesto + '</span></br> \
                 <span class="titulo">Derechos: </span> \
                 <span class="cacao">' + this.totalDerecho + '</span></br> \
-                <span class="titulo">Actualización: </span> \
-                <span class="cacao">' + this.totalActualizacion + '</span></br> \
-                <span class="titulo">Recargos: </span> \
-                <span class="cacao">' + this.totalRecargo + '</span></br> \
-                <span class="titulo">Total: </span> \
-                <span class="cacao">' + this.totalTenencia + '</span></br> \
+        <span class="titulo">Actualización: </span> \
+            <span class="cacao">' + this.totalActualizacion + '</span></br> \
+            <span class="titulo">Recargos: </span> \
+            <span class="cacao">' + this.totalRecargo + '</span></br> \
+        <span class="titulo">Total: </span> \
+            <span class="cacao">' + this.totalTenencia + '</span></br> \
                 </div></br>';
         return html;
     };
 }
+
 function Infraccion() {
     this.pagada = false;
     this.toHtml = function () {
@@ -214,13 +143,12 @@ function Infraccion() {
             textoPagada = 'Sí';
         }
         var html = '<div class="cuadro-info"> \
-                <span class="titulo">Folio: </span><span>' + this.folio + '</span></br> \
+            <span class="titulo">Folio: </span><span>' + this.folio + '</span></br> \
                 <span class="titulo">Fecha: </span><span>' + this.fecha + '</span></br> \
-                <span class="titulo">Pagada: </span><span>' + textoPagada + '</span></br> \
-                <span class="titulo">Motivo: </span><span>' + this.motivo + '</span></br> \
-                <span class="titulo">Multa en días de salario: </span><span>' + this.sancionDias + '</span></br> \
-		<span class="titulo">Multa estimada: </span><span class="cacao">' + this.sancionMonto + '</span></br> \
-                </div></br>';
+            <span class="titulo">Pagada: </span><span>' + textoPagada + '</span></br> \
+        <span class="titulo">Motivo: </span><span>' + this.motivo + '</span></br> \                 <span class="titulo">Multa en días de salario: </span><span>' + this.sancionDias + '</span></br> \
+<span class="titulo">Multa estimada: </span><span class="cacao">' + this.sancionMonto + '</span></br> \
+    </div></br>';
         return html;
     };
 }

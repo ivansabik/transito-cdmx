@@ -3,3 +3,5 @@ platforms
 composer.phar
 composer.lock
 *~
+tests/reports
+.log

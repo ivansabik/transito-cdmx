@@ -6,7 +6,7 @@ URL_GMAPS_MAPA = 'http://maps.google.com/maps?q=';
 URL_GMAPS_DIR = 'http://maps.google.com/maps?saddr=Current+Location&daddr=';
 URL_GMAPS_CORRALONES = 'http://goo.gl/K3YW7R';
 URL_GMAPS_VERIFICENTROS = 'http://goo.gl/4x9EtG';
-MAX_RADIO_CERCANAS = 5000;
+RADIO_MAX_CERCANAS = 5000;
 
 // Home
 $(document).on('pageshow', '#index', function () {

@@ -32,7 +32,6 @@ function Vehiculo(json) {
         adeudos.push(adeudo);
     }
     this.adeudosTenencia = adeudos;
-
     this.toHtml = function () {
         var html = '<div class="cuadro-info">';
         if (this.placas) {
@@ -84,16 +83,16 @@ Vehiculo.existeLocal = function (placas) {
 function Corralon() {
     this.toHtml = function () {
         var html = '<div class="cuadro-info"> \
-                <h4>' + this.nombre + '</h4> \
-                <span class="titulo">Dirección: </span><span>' + this.direccion + '</span></br> \
-                <span class="titulo">Delegación: </span><span>' + this.delegacion + '</span></br>';
+        <h4>' + this.nombre + '</h4> \
+        <span class="titulo">Dirección: </span><span>' + this.direccion + '</span></br> \
+        <span class="titulo">Delegación: </span><span>' + this.delegacion + '</span></br>';
         if (this.telefono) {
             html += '<span class="titulo">Teléfono: </span>' + this.telefono + '</span></br> \
-                 <p><a href="tel:' + this.telefono + '"><button data-role="button" data-icon="phone">Llamar</button></a></p>';
+            <p><a href="tel:' + this.telefono + '"><button data-role="button" data-icon="phone">Llamar</button></a></p>';
         }
         html += '<p><a href="#" onclick="window.open(\'' + URL_GMAPS_MAPA + this.latitud + ',' + this.longitud + '\', \'_system\');"><button data-role="button" data-icon="location">Ver en mapa</button></a></p> \
-            <p><a href="#" onclick="window.open(\'' + URL_GMAPS_DIR + this.latitud + ',' + this.longitud + '\', \'_system\');"><button data-role="button" data-icon="navigation">¿Cómo llegar?</button></p> \
-            </div></br>';
+        <p><a href="#" onclick="window.open(\'' + URL_GMAPS_DIR + this.latitud + ',' + this.longitud + '\', \'_system\');"><button data-role="button" data-icon="navigation">¿Cómo llegar?</button></p> \
+        </div></br>';
         return html;
     };
 }
@@ -101,16 +100,16 @@ function Corralon() {
 function Verificentro() {
     this.toHtml = function () {
         var html = '<div class="cuadro-info"> \
-		<h4>' + this.razon_social + '</h4> \
-		<span class="titulo">Dirección: </span><span>' + this.direccion + '</span></br> \
-		<span class="titulo">Delegación: </span><span>' + this.delegacion + '</span></br>';
+        <h4>' + this.razon_social + '</h4> \
+        <span class="titulo">Dirección: </span><span>' + this.direccion + '</span></br> \
+        <span class="titulo">Delegación: </span><span>' + this.delegacion + '</span></br>';
         if (this.telefono) {
             html += '<span class="titulo">Teléfono: </span>' + this.telefono + '</span></br> \
-                <p><a href="tel:' + this.telefono + '"><button data-role="button" data-icon="phone">Llamar</button></a></p>';
+            <p><a href="tel:' + this.telefono + '"><button data-role="button" data-icon="phone">Llamar</button></a></p>';
         }
         html += '<p><a href="#" onclick="window.open(\'' + URL_GMAPS_MAPA + this.latitud + ',' + this.longitud + '\', \'_system\');"><button data-role="button" data-icon="location">Ver en mapa</button></a></p> \
-            <p><a href="#" onclick="window.open(\'' + URL_GMAPS_DIR + this.latitud + ',' + this.longitud + '\', \'_system\');"><button data-role="button" data-icon="navigation">¿Cómo llegar?</button></p> \
-            </div></br>';
+        <p><a href="#" onclick="window.open(\'' + URL_GMAPS_DIR + this.latitud + ',' + this.longitud + '\', \'_system\');"><button data-role="button" data-icon="navigation">¿Cómo llegar?</button></p> \
+        </div></br>';
         return html;
     };
 }
@@ -118,19 +117,19 @@ function Verificentro() {
 function Adeudo() {
     this.toHtml = function () {
         var html = '<div class="cuadro-info"> \
-                <span class="titulo">Año: </span> \
+        <span class="titulo">Año: </span> \
         <span>' + this.anio + '</span></br> \
         <span class="titulo">Impuesto: </span> \
-            <span class="cacao">' + this.totalImpuesto + '</span></br> \
-                <span class="titulo">Derechos: </span> \
-                <span class="cacao">' + this.totalDerecho + '</span></br> \
+        <span class="cacao">' + this.totalImpuesto + '</span></br> \
+        <span class="titulo">Derechos: </span> \
+        <span class="cacao">' + this.totalDerecho + '</span></br> \
         <span class="titulo">Actualización: </span> \
-            <span class="cacao">' + this.totalActualizacion + '</span></br> \
-            <span class="titulo">Recargos: </span> \
-            <span class="cacao">' + this.totalRecargo + '</span></br> \
+        <span class="cacao">' + this.totalActualizacion + '</span></br> \
+        <span class="titulo">Recargos: </span> \
+        <span class="cacao">' + this.totalRecargo + '</span></br> \
         <span class="titulo">Total: </span> \
-            <span class="cacao">' + this.totalTenencia + '</span></br> \
-                </div></br>';
+        <span class="cacao">' + this.totalTenencia + '</span></br> \
+        </div></br>';
         return html;
     };
 }
@@ -143,12 +142,13 @@ function Infraccion() {
             textoPagada = 'Sí';
         }
         var html = '<div class="cuadro-info"> \
-            <span class="titulo">Folio: </span><span>' + this.folio + '</span></br> \
-                <span class="titulo">Fecha: </span><span>' + this.fecha + '</span></br> \
-            <span class="titulo">Pagada: </span><span>' + textoPagada + '</span></br> \
-        <span class="titulo">Motivo: </span><span>' + this.motivo + '</span></br> \                 <span class="titulo">Multa en días de salario: </span><span>' + this.sancionDias + '</span></br> \
-<span class="titulo">Multa estimada: </span><span class="cacao">' + this.sancionMonto + '</span></br> \
-    </div></br>';
+        <span class="titulo">Folio: </span><span>' + this.folio + '</span></br> \
+        <span class="titulo">Fecha: </span><span>' + this.fecha + '</span></br> \
+        <span class="titulo">Pagada: </span><span>' + textoPagada + '</span></br> \
+        <span class="titulo">Motivo: </span><span>' + this.motivo + '</span></br> \
+        <span class="titulo">Multa en días de salario: </span><span>' + this.sancionDias + '</span></br> \
+        <span class="titulo">Multa estimada: </span><span class="cacao">' + this.sancionMonto + '</span></br> \
+        </div></br>';
         return html;
     };
 }

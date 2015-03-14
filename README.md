@@ -16,3 +16,16 @@ App que proporciona info de automóviles del DF como infracciones, adeudos de te
 
 ```phonegap build android -d```
 
+### Tests
+
+#### Unitarios
+
+
+
+#### Funcionales
+
+Usa https://github.com/beatfactor/nightwatch, instrucciones de instalación en http://nightwatchjs.org/guide#installation
+Para correr tests funcionales ```nightwatch```
+
+
+

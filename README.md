@@ -1,6 +1,8 @@
 Tránsito DF
 ===========
 
+[![Build Status](https://travis-ci.org/mandroslabs/transito-df.svg)](https://travis-ci.org/mandroslabs/transito-df)
+
 App que proporciona info de automóviles del DF como infracciones, adeudos de tenencia, corralones y verificentros
 
 ### Menú principal
@@ -12,7 +14,17 @@ App que proporciona info de automóviles del DF como infracciones, adeudos de te
 ### Corralones
 <img src="https://raw.githubusercontent.com/mandroslabs/transito-df/master/doc/3.png">
 
-### Build Android
+### Android
 
 ```phonegap build android -d```
+
+### API
+
+- /vehiculos
+- /corralones
+- /verificentros
+
+### Tests
+
+```npm test```
 

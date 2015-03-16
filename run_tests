@@ -1,7 +1,0 @@
-#!/bin/bash
-#------------------------------
-#-- test runner
-#------------------------------
-
-set -e
-./nightwatch --group funcionales-api

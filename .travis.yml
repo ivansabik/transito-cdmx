@@ -4,3 +4,5 @@ node_js:
   - 0.6
   - 0.8
 
+install: npm install -g
+script: npm test

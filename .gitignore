@@ -1,4 +1,6 @@
 *~
+platforms
 tests/reports
+tests/logs
 .log
 node_modules

@@ -3,18 +3,21 @@
   "version": "1.0.0",
   "description": "App móvil multiplataforma para consultar info de automóviles del DF como infracciones, adeudos de tenencia, corralones y verificentros",
   "main": "transito-df.js",
+  "scripts": {
+    "start": "node transito-df.js",
+    "test": "nodeunit tests/tests-api.js; nightwatch --group funcionales-api"
+  },
   "directories": {
     "doc": "doc",
     "test": "tests"
   },
   "dependencies": {
     "express": "^4.12.2",
-    "nightwatch": "^0.5.36"
+    "nightwatch": "^0.5.36",
+    "nodeunit": "^0.9.1",
+    "phonegap": "^4.2.0-0.24.2"
   },
   "devDependencies": {},
-  "scripts": {
-    "test": "nightwatch"
-  },
   "repository": {
     "type": "git",
     "url": "https://github.com/mandroslabs/transito-df.git"

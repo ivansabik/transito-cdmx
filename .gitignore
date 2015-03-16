@@ -1,7 +1,4 @@
-vendor
-platforms
-composer.phar
-composer.lock
 *~
 tests/reports
 .log
+node_modules

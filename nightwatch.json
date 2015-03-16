@@ -1,28 +1,31 @@
 {
-  "src_folders" : ["./tests"],
-  "output_folder" : "./tests/reports",
+  "src_folders" : ["tests"],
+  "output_folder" : "tests/reports",
   "custom_commands_path" : "",
   "custom_assertions_path" : "",
   "globals_path" : "",
-  
+
   "selenium" : {
-    "start_process" : false,
-    "server_path" : "",
-    "log_path" : "",
+    "start_process" : true,
+    "server_path" : "selenium-server-standalone-2.45.0.jar",
+    "log_path" : "tests/logs",
     "host" : "127.0.0.1",
     "port" : 4444,
     "cli_args" : {
-      "webdriver.chrome.driver" : "",
+      "webdriver.chrome.driver" : "selenium/chromedriver",
       "webdriver.ie.driver" : ""
-    }  
+    }
   },
-  
+
   "test_settings" : {
     "default" : {
-      "launch_url" : "http://localhost",
+      "launch_url" : "http://localhost:3000",
       "selenium_port"  : 4444,
       "selenium_host"  : "localhost",
-      "silent": true,
+      "pathname": "/wd/hub",
+      "silent" : true,
+      "disable_colors": false,
+      "firefox_profile" : false,
       "screenshots" : {
         "enabled" : false,
         "path" : ""
@@ -33,7 +36,7 @@
         "acceptSslCerts": true
       }
     },
-    
+
     "chrome" : {
       "desiredCapabilities": {
         "browserName": "chrome",
@@ -43,4 +46,3 @@
     }
   }
 }
-

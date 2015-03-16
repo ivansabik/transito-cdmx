@@ -1,0 +1,33 @@
+{
+  "name": "transito-df",
+  "version": "1.0.0",
+  "description": "App móvil multiplataforma para consultar info de automóviles del DF como infracciones, adeudos de tenencia, corralones y verificentros",
+  "main": "transito-df.js",
+  "directories": {
+    "doc": "doc",
+    "test": "tests"
+  },
+  "dependencies": {
+    "express": "^4.12.2",
+    "nightwatch": "^0.5.36"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "nightwatch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mandroslabs/transito-df.git"
+  },
+  "keywords": [
+    "nodejs",
+    "transito-df",
+    "mandroslabs"
+  ],
+  "author": "Mandroslabs",
+  "license": "Apache",
+  "bugs": {
+    "url": "https://github.com/mandroslabs/transito-df/issues"
+  },
+  "homepage": "https://github.com/mandroslabs/transito-df"
+}

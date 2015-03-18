@@ -5,7 +5,7 @@
   "main": "transito-df.js",
   "scripts": {
     "start": "node transito-df.js",
-    "test": "./node_modules/nodeunit/bin/nodeunit tests/tests-api.js; ./node_modules/nightwatch/bin/nightwatch --group funcionales-api"
+    "test": "./node_modules/nodeunit/bin/nodeunit tests; ./node_modules/nightwatch/bin/nightwatch"
   },
   "directories": {
     "doc": "doc",

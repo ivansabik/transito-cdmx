@@ -1,7 +1,8 @@
+var transitoDf = require( '../lib/transitoDf.js');
+
 module.exports = {
-    setUp: function testsUnitariosApiSetup(cb) {
-        this.tdf = new TransitoDf();
-        this.respuesta = this.tdf.consultaPlacas('183YTP');
+    setUp: function testsUnitariosApiSetup(callback) {
+        this.respuesta = transitoDf.consultaPlacas('183YTP');
     },
     obtenerPlacas: function(test) {
         assert.equal('183YTP', this.respuesta['placas']);
@@ -46,7 +47,7 @@ module.exports = {
         test.done();
     },
     validarPlacas: function(test) {
-        test.throws(function () { this.tdf.consultaPlacas('183-YTP'); });
+        test.throws(function () { transitoDf.consultaPlacas('183-YTP'); });
         test.done();
     },
     calcularHoyNoCircula: function(test) {
@@ -55,7 +56,7 @@ module.exports = {
         test.done();
     },
     buscarVehiculoNoExisteEnPadron: function(test) {
-        test.throws(function () { this.tdf.consultaPlacas('154DBH'); });
+        test.throws(function () { transitoDf.consultaPlacas('154DBH'); });
         test.done();
     },
     obtenerMontoAdeudosInfracciones: function(test) {
@@ -74,10 +75,10 @@ module.exports = {
     },
     obtenerListaVerificentros: function(test) {
         var assertVerificentros = {};
-        assert.equal(assertVerificentros, this.tdf.verificentros());
+        assert.equal(assertVerificentros, transitoDf.verificentros());
     },
     obtenerlistaCorralones: function(test) {
         var assertCorralones = {};
-        assert.equal(assertCorralones, this.tdf.corralones());
+        assert.equal(assertCorralones, transitoDf.corralones());
     }
 };

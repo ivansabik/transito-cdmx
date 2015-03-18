@@ -5,7 +5,7 @@
   "main": "transito-df.js",
   "scripts": {
     "start": "node transito-df.js",
-    "test": "nodeunit tests/tests-api.js; nightwatch --group funcionales-api"
+    "test": "./node_modules/nodeunit/bin/nodeunit tests/tests-api.js; ./node_modules/nightwatch/bin/nightwatch --group funcionales-api"
   },
   "directories": {
     "doc": "doc",
@@ -16,8 +16,7 @@
   },
   "devDependencies" : {
     "nightwatch": "^0.5.36",
-    "nodeunit": "^0.9.1",
-    "phonegap": "^4.2.0-0.24.2"
+    "nodeunit": "^0.9.1"
   },
   "repository": {
     "type": "git",

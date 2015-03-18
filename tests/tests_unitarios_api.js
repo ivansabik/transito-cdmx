@@ -3,8 +3,6 @@ module.exports = {
         this.tdf = new TransitoDf();
         this.respuesta = this.tdf.consultaPlacas('183YTP');
     },
-    tearDown: function testsUnitariosApiTearDown(cb) {
-    },
     obtenerPlacas: function(test) {
         assert.equal('183YTP', this.respuesta['placas']);
         test.done();
@@ -30,10 +28,10 @@ module.exports = {
         test.done();
     },
     obtenerMontoAdeudos: function(test) {
-        assert.equal('', this.respuesta['monto_adeudos']);
+        assert.equal(0.00, this.respuesta['monto_adeudos']);
     },
     obtenerMontoInfracciones: function(test) {
-        assert.equal('', this.respuesta['monto_infracciones']);
+        assert.equal(0.00, this.respuesta['monto_infracciones']);
     },
     obtenerFechaFactura: function(test) {
         assert.equal('2012-11-30', this.respuesta['fecha_factura']);
@@ -61,26 +59,25 @@ module.exports = {
         test.done();
     },
     obtenerMontoAdeudosInfracciones: function(test) {
-        assert.equal('', this.respuesta['monto_adeudos_infracciones']);
+        assert.equal(0.00, this.respuesta['monto_adeudos_infracciones']);
     },
     obtenerInfracciones: function(test) {
-        assert.equal('', this.respuesta['infracciones']);
-        test.done();
+        var assertInfracciones = {};
+        assert.equal(assertInfracciones, this.respuesta['infracciones']);
     },
     obtenerAdeudosTenencia: function(test) {
-        assert.equal('', this.respuesta['adeudos_tenencia']);
-        test.done();
+        var assertAdeudosTenencia = {};
+        assert.equal(assertAdeudosTenencia, this.respuesta['adeudos_tenencia']);
     },
     obtenerMontoAdeudosTenencia: function(test) {
-        assert.equal('', this.respuesta['monto_adeudos_tenencias']);
-        test.done();
+        assert.equal(0.00, this.respuesta['monto_adeudos_tenencias']);
     },
     obtenerListaVerificentros: function(test) {
         var assertVerificentros = {};
-        assert.equal('', this.tdf.verificentros());
+        assert.equal(assertVerificentros, this.tdf.verificentros());
     },
     obtenerlistaCorralones: function(test) {
         var assertCorralones = {};
-        assert.equal('', this.tdf.corralones());
+        assert.equal(assertCorralones, this.tdf.corralones());
     }
 };

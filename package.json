@@ -12,7 +12,8 @@
     "test": "tests"
   },
   "dependencies": {
-    "express": "^4.12.2"
+    "express": "^4.12.2",
+    "x-ray": "^1.0"
   },
   "devDependencies" : {
     "nightwatch": "^0.5.36",

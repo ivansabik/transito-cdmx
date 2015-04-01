@@ -17,7 +17,7 @@
   },
   "devDependencies" : {
     "nightwatch": "^0.5.36",
-    "nodeunit": "^0.9.1"
+    "mocha": ""
   },
   "repository": {
     "type": "git",

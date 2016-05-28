@@ -28,16 +28,25 @@ $(document).on('pageshow', '#index', function () {
 
 // Consultar placas
 $(document).on('pageshow', '#consulta-placas', function () {
+    $('#consulta').toggle();
     $.mobile.loading('show');
     var placas = simpleStorage.get('placas');
     if (!placas) {
         alert('Err0r! Numero de placas undefined');
     }
     var mostrarResultados = function (consultaJson) {
+        $('#consulta').toggle();
+        if(consultaJson.error) {
+            alert(consultaJson.error);
+            $.mobile.loading('hide');
+            parent.history.back();
+            return false;
+        }
         var vehiculo = new Vehiculo(consultaJson);
         $('#info-general').html(vehiculo.toHtml());
         var adeudosTenencia = vehiculo.adeudosTenencia;
         if (adeudosTenencia.length > 0) {
+            $('#adeudos-tenencia').html('');
             for (var i = 0; i < adeudosTenencia.length; i++) {
                 var adeudo = adeudosTenencia[i];
                 $('#adeudos-tenencia').append(adeudo.toHtml());
@@ -47,6 +56,7 @@ $(document).on('pageshow', '#consulta-placas', function () {
         }
         var infraciones = vehiculo.infracciones;
         if (infraciones.length > 0) {
+            $('#infracciones').html('');
             for (var i = 0; i < infraciones.length; i++) {
                 var infraccion = infraciones[i];
                 $('#infracciones').append(infraccion.toHtml());

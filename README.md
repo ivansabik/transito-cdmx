@@ -1,10 +1,17 @@
-Tránsito DF
+Tránsito CDMX
 ===========
 
-[![Build Status](https://travis-ci.org/mandroslabs/transito-df.svg)](https://travis-ci.org/mandroslabs/transito-df)
+[![Build Status](https://travis-ci.org/mandroslabs/transito-df.svg)](https://travis-ci.org/ivansabik/transito-cdmx)
 
-App que proporciona info de automóviles del DF como infracciones, adeudos de tenencia, corralones y verificentros
+App para conulstar infracciones, adeudos de tenencia, corralones y verificentros de la CDMX
 
+
+```
+git clone
+cd
+bower install
+php -S localhost:8000
+```
 ### Menú principal
 <img src="https://raw.githubusercontent.com/mandroslabs/transito-df/master/doc/1.png">
 
@@ -17,18 +24,3 @@ App que proporciona info de automóviles del DF como infracciones, adeudos de te
 ### Android
 
 ```phonegap build android -d```
-
-### API
-
-- /vehiculos
-- /corralones
-- /verificentros
-
-### Tests
-
-```npm test```
-
-
-
-[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/ivansabik/transito-cdmx/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
-

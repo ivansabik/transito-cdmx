@@ -7,8 +7,8 @@
     <author email="movil@mandroslabs.com" href="http://mandroslabs.com">
         Mandros labs
     </author>
-    <content src="index.html" />
-    <icon src="www/res/icon.png" />
-    <access origin="*" />
-    <access origin="tel:*" launch-external="yes" />
+    <content src="index.html"/>
+    <icon src="www/res/icon.png"/>
+    <access origin="*"/>
+    <access origin="tel:*" launch-external="yes"/>
 </widget>

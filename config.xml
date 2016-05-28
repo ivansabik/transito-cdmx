@@ -2,7 +2,7 @@
 <widget id="com.mandroslabs.transitodf" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
     <name>Tránsito DF</name>
     <description>
-        App móvil para consultar info de automóviles del DF como infracciones, adeudos de tenencia, corralones y verificentros.
+        App móvil para consultar información de un vehículo, infracciones y adeudos de tenencia.
     </description>
     <author email="movil@mandroslabs.com" href="http://mandroslabs.com">
         Mandros labs

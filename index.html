@@ -16,29 +16,21 @@
     <!--<script src="cordova.js"></script>-->
 </head>
 
-<!--Menu -->
 <div data-role="page" id="index">
     <div data-role="header" class="centrado">
-        <img src="img/kaeffer.png" alt="Logo Tránsito DF"> <span>Tránsito DF</span>
+        <img src="img/kaeffer.png" alt="Logo Tránsito CDMX"> <span>Tránsito CDMX</span>
     </div>
     <div data-role="content">
         <input type="text" class="centrado" id="input-placas" placeholder="Placas, ej. 999ZZZ">
         <p>
             <button data-role="button" id="consultar-placas" data-ajax="false">Consultar placas</button>
         </p>
-        <p>
-            <a href="#menu-corralones" data-role="button">Corralones</a>
-        </p>
-        <p>
-            <a href="#menu-verificentros" data-role="button">Verificentros</a>
-        </p>
     </div>
 </div>
 
-<!--Consultar placas -->
 <div data-role="page" id="consulta-placas">
     <div data-role="header" class="centrado">
-        <img src="img/kaeffer.png" alt="Logo Tránsito DF"> <span>Tránsito DF</span>
+        <img src="img/kaeffer.png" alt="Logo Tránsito CDMX"> <span>Tránsito CDMX</span>
     </div>
     <div data-role="content">
         <div id="consulta" class="centrado">
@@ -49,52 +41,6 @@
             <h3 class="centrado">Infracciones</h3>
             <div id="infracciones"></div>
         </div>
-    </div>
-</div>
-<!-- Corralones menu -->
-<div data-role="page" id="menu-corralones">
-    <div data-role="header" class="centrado">
-        <img src="img/kaeffer.png" alt="Logo Tránsito DF"> <span>Tránsito DF</span>
-    </div>
-    <button data-role="button" id="ver-corralones-cercanos">Corralones cercanos</button>
-    <button data-role="button" id="ver-corralones-todos">Todos los corralones</button>
-    <a href="#" data-role="button" onclick="window.open('http://goo.gl/K3YW7R', '_system');">Ver corralones en mapa</a>
-    <div data-role="footer" class="footer centrado">
-        <p><a href="#" onclick="window.open('http://mandroslabs.com', '_system');">mandroslabs.com</a></p>
-    </div>
-</div>
-<!-- Verificentros menu -->
-<div data-role="page" id="menu-verificentros">
-    <div data-role="header" class="centrado">
-        <img src="img/kaeffer.png" alt="Logo Tránsito DF"> <span>Tránsito DF</span>
-    </div>
-    <div data-role="content">
-        <button data-role="button" id="ver-verificentros-cercanos">Verificentros cercanos</button>
-        <button data-role="button" id="ver-verificentros-todos">Todos los verificentros</button>
-        <a href="#" data-role="button" onclick="window.open('http://goo.gl/4x9EtG', '_system');">Ver verificentros en mapa</a>
-    </div>
-</div>
-<!-- Lista corralones -->
-<div data-role="page" id="lista-corralones">
-    <div data-role="header" class="centrado">
-        <img src="img/kaeffer.png" alt="Logo Tránsito DF"> <span>Tránsito DF</span>
-    </div>
-    <div data-role="content">
-        <h3 class="centrado">Corralones</h3>
-        <div id="corralones" class="centrado"></div>
-    </div>
-    <div data-role="footer" class="footer centrado">
-        <p><a href="#" onclick="window.open('http://mandroslabs.com', '_system');">mandroslabs.com</a></p>
-    </div>
-</div>
-<!-- Lista verificentros -->
-<div data-role="page" id="lista-verificentros">
-    <div data-role="header" class="centrado">
-        <img src="img/kaeffer.png" alt="Logo Tránsito DF"> <span>Tránsito DF</span>
-    </div>
-    <div data-role="content">
-        <h3 class="centrado">Verificentros</h3>
-        <div id="verificentros" class="centrado"></div>
     </div>
 </div>
 

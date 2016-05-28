@@ -1,13 +1,15 @@
 function Vehiculo(json) {
     this.placas = json['placa'];
     this.modelo = json['modelo'];
-    this.procedencia = json['procedencia'];
+    if(json['procedencia_nacional']) {
+      this.procedencia = 'Nacional';
+    } else {
+      this.procedencia = 'Extranjera';
+    }
     this.valorFactura = json['valor_factura'];
-    this.claveVehicular = json['clave_vehicular'];
     this.fechaFactura = json['fecha_factura'];
-    this.rfc = json['rfc'];
     this.depreciacion = json['depreciacion'];
-    this.totalAdeudos = json['total_adeudos'];
+    this.totalAdeudos = json['monto_total_adeudos'];
     var infracciones = [];
     for (var i = 0; i < json['infracciones'].length; i++) {
         var infraccion = new Infraccion();
@@ -15,20 +17,20 @@ function Vehiculo(json) {
         infraccion.fecha = json['infracciones'][i]['fecha'];
         infraccion.pagada = json['infracciones'][i]['pagada'];
         infraccion.motivo = json['infracciones'][i]['motivo'];
-        infraccion.sancionDias = json['infracciones'][i]['sancion']['dias_sm'];
-        infraccion.sancionMonto = json['infracciones'][i]['sancion']['monto'];
+        infraccion.sancion = json['infracciones'][i]['sancion'];
+        infraccion.sancionMonto = json['infracciones'][i]['monto_infraccion'];
         infracciones.push(infraccion);
     }
     this.infracciones = infracciones;
     var adeudos = [];
     for (var i = 0; i < json['adeudos_tenencias'].length; i++) {
         var adeudo = new Adeudo();
-        adeudo.anio = json['adeudos_tenencias'][i]['anio'];
+        adeudo.anio = json['adeudos_tenencias'][i]['ejercicio'];
         adeudo.totalImpuesto = json['adeudos_tenencias'][i]['total_impuesto'];
         adeudo.totalDerecho = json['adeudos_tenencias'][i]['total_derecho'];
-        adeudo.totalActualizacion = json['adeudos_tenencias'][i]['total_actualizacion'];
+        adeudo.totalActualizacion = json['adeudos_tenencias'][i]['total_actualiza'];
         adeudo.totalRecargo = json['adeudos_tenencias'][i]['total_recargo'];
-        adeudo.totalTenencia = json['adeudos_tenencias'][i]['total_tenencia'];
+        adeudo.totalTenencia = json['adeudos_tenencias'][i]['total'];
         adeudos.push(adeudo);
     }
     this.adeudosTenencia = adeudos;
@@ -46,14 +48,8 @@ function Vehiculo(json) {
         if (this.valorFactura) {
             html += '<span class = "titulo" >Valor factura: </span><span class="cacao">' + this.valorFactura + '</span></br>';
         }
-        if (this.claveVehicular) {
-            html += '<span class = "titulo" >Clave vehicular: </span><span>' + this.claveVehicular + '</span></br>';
-        }
         if (this.fechaFactura) {
             html += '<span class = "titulo" >Fecha factura: </span><span>' + this.fechaFactura + '</span></br>';
-        }
-        if (this.rfc) {
-            html += '<span class = "titulo" >RFC: </span><span>' + this.rfc + '</span></br>';
         }
         if (this.depreciacion) {
             html += '<span class = "titulo" >Monto depreciación: </span><span class="cacao">' + this.depreciacion + '</span></br>';
@@ -78,41 +74,7 @@ Vehiculo.validaPlacas = function (placas) {
 };
 
 Vehiculo.existeLocal = function (placas) {
-}; // busca si está guardado
-
-function Corralon() {
-    this.toHtml = function () {
-        var html = '<div class="cuadro-info"> \
-        <h4>' + this.nombre + '</h4> \
-        <span class="titulo">Dirección: </span><span>' + this.direccion + '</span></br> \
-        <span class="titulo">Delegación: </span><span>' + this.delegacion + '</span></br>';
-        if (this.telefono) {
-            html += '<span class="titulo">Teléfono: </span>' + this.telefono + '</span></br> \
-            <p><a href="tel:' + this.telefono + '"><button data-role="button" data-icon="phone">Llamar</button></a></p>';
-        }
-        html += '<p><a href="#" onclick="window.open(\'' + URL_GMAPS_MAPA + this.latitud + ',' + this.longitud + '\', \'_system\');"><button data-role="button" data-icon="location">Ver en mapa</button></a></p> \
-        <p><a href="#" onclick="window.open(\'' + URL_GMAPS_DIR + this.latitud + ',' + this.longitud + '\', \'_system\');"><button data-role="button" data-icon="navigation">¿Cómo llegar?</button></p> \
-        </div></br>';
-        return html;
-    };
-}
-
-function Verificentro() {
-    this.toHtml = function () {
-        var html = '<div class="cuadro-info"> \
-        <h4>' + this.razon_social + '</h4> \
-        <span class="titulo">Dirección: </span><span>' + this.direccion + '</span></br> \
-        <span class="titulo">Delegación: </span><span>' + this.delegacion + '</span></br>';
-        if (this.telefono) {
-            html += '<span class="titulo">Teléfono: </span>' + this.telefono + '</span></br> \
-            <p><a href="tel:' + this.telefono + '"><button data-role="button" data-icon="phone">Llamar</button></a></p>';
-        }
-        html += '<p><a href="#" onclick="window.open(\'' + URL_GMAPS_MAPA + this.latitud + ',' + this.longitud + '\', \'_system\');"><button data-role="button" data-icon="location">Ver en mapa</button></a></p> \
-        <p><a href="#" onclick="window.open(\'' + URL_GMAPS_DIR + this.latitud + ',' + this.longitud + '\', \'_system\');"><button data-role="button" data-icon="navigation">¿Cómo llegar?</button></p> \
-        </div></br>';
-        return html;
-    };
-}
+};
 
 function Adeudo() {
     this.toHtml = function () {
@@ -146,7 +108,7 @@ function Infraccion() {
         <span class="titulo">Fecha: </span><span>' + this.fecha + '</span></br> \
         <span class="titulo">Pagada: </span><span>' + textoPagada + '</span></br> \
         <span class="titulo">Motivo: </span><span>' + this.motivo + '</span></br> \
-        <span class="titulo">Multa en días de salario: </span><span>' + this.sancionDias + '</span></br> \
+        <span class="titulo">Multa en días de salario: </span><span>' + this.sancion + '</span></br> \
         <span class="titulo">Multa estimada: </span><span class="cacao">' + this.sancionMonto + '</span></br> \
         </div></br>';
         return html;

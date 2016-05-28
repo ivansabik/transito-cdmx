@@ -1,12 +1,5 @@
 // Constantes globales
 URL_API = 'http://localhost:3000/api/v1';
-NUM_MAX_RES = 5;
-PATH = window.location.href.replace('index.html', '');
-URL_GMAPS_MAPA = 'http://maps.google.com/maps?q=';
-URL_GMAPS_DIR = 'http://maps.google.com/maps?saddr=Current+Location&daddr=';
-URL_GMAPS_CORRALONES = 'http://goo.gl/K3YW7R';
-URL_GMAPS_VERIFICENTROS = 'http://goo.gl/4x9EtG';
-RADIO_MAX_CERCANAS = 5000;
 
 // Home
 $(document).on('pageshow', '#index', function () {
@@ -81,48 +74,3 @@ $(document).on('pageshow', '#consulta-placas', function () {
         $.ajax(ajaxOptions);
     }
 });
-
-$(document).on('pageshow', '#menu-corralones', function () {
-    // Ver todos los corralones
-    // Ver corralones cercanos
-    $('#ver-corralones-cercanos').click(function () {
-        obtenerUbicacion();
-    });
-    // Ver corralones en mapa
-});
-
-$(document).on('pageshow', '#menu-verificentros', function () {
-    // Ver todos los verificentros
-    // Ver verificentros cercanos
-    $('#ver-corralones-cercanos').click(function () {
-        obtenerUbicacion();
-    });
-    // Ver verificentros en mapa
-});
-
-function obtenerUbicacion() {
-    if (navigator.geolocation) {
-        navigator.geolocation.getCurrentPosition(exitoCoordenadas, coordenadasNativo, {enableHighAccuracy: false, timeout: 60 * 1000, maximumAge: 1000 * 60 * 10});
-    } else {
-        errorGeolocalizacion();
-    }
-
-    function coordenadasNativo() {
-        navigator.geolocation.getCurrentPosition(exitoCoordenadas, errorCoordenadas, {enableHighAccuracy: true, timeout: 60 * 1000 * 2, maximumAge: 1000 * 60 * 10});
-    }
-
-    function exitoCoordenadas(location) {
-        var latitud = location.coords.latitude;
-        var longitud = location.coords.longitude;
-        // set ubicacion en local storage
-        alert(latitud + ',' + longitud);
-    }
-
-    function errorCoordenadas() {
-        alert('Err0r! Obtener coordenadas geolocalización');
-    }
-
-    function errorGeolocalizacion() {
-        alert('Err0r! Error geolocalización!');
-    }
-}

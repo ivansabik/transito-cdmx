@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<widget id="com.mandroslabs.tranzita" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
+    <name>Tranzita</name>
+    <description>
+        App móvil para consultar info de automóviles del DF como infracciones, adeudos de tenencia, corralones y verificentros.
+    </description>
+    <author email="sabik@mandroslabs.com" href="http://mandroslabs.com">
+        Mandros Labs
+    </author>
+    <icon src="icon.png" />
+    <platform name="android" />
+</widget>

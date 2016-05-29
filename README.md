@@ -6,20 +6,12 @@ tranzita CDMX
 App para consultar infracciones y adeudos de tenencia de coches con números de placa de la CDMX.
 
 ```
-git clone
-cd
+git clone https://github.com/ivansabik/tranzita-cdmx.git
+cd tranzita-cdmx.git
 bower install
 php -S localhost:8000
 ```
-### Menú principal
+
 <img src="https://raw.githubusercontent.com/ivansabik/tranzita-cdmx/master/doc/1.png">
 
-### Consulta de placas
 <img src="https://raw.githubusercontent.com/ivansabik/tranzita-cdmx/master/doc/2.png">
-
-### Corralones
-<img src="https://raw.githubusercontent.com/ivansabik/tranzita-cdmx/master/doc/3.png">
-
-### Android
-
-```phonegap build android -d```

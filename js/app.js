@@ -1,5 +1,5 @@
 // Constantes globales
-URL_API = 'http://localhost:3000/api/v1';
+URL_API = 'http://46.101.228.138:3000/api/v1';
 
 // Home
 $(document).on('pageshow', '#index', function () {

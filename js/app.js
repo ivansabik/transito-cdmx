@@ -81,6 +81,7 @@ $(document).on('pageshow', '#consulta-placas', function () {
     if (Vehiculo.existeLocal(placas)) {
         alert('Existen localmente no hay que hacer apicall!');
     } else {
+        $.support.cors = true;
         $.ajax(ajaxOptions);
     }
 });

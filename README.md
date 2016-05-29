@@ -12,6 +12,4 @@ bower install
 php -S localhost:8000
 ```
 
-<img src="https://raw.githubusercontent.com/ivansabik/tranzita-cdmx/master/doc/1.png">
-
-<img src="https://raw.githubusercontent.com/ivansabik/tranzita-cdmx/master/doc/2.png">
+<img align="center" width="300" src="http://g.recordit.co/X5FTI91dCM.gif">

@@ -1,4 +1,4 @@
-<center><img src="https://raw.githubusercontent.com/ivansabik/tranzita/master/doc/logo.png"></center>
+<p align="center"><img src="https://raw.githubusercontent.com/ivansabik/tranzita/master/doc/logo.png"></p>
 
 [![Build Status](https://travis-ci.org/ivansabik/tranzita.svg)](https://travis-ci.org/ivansabik/tranzita)
 
@@ -15,11 +15,11 @@ npm start
 Después de la aplicación cliente:
 
 ```
-git clone https://github.com/ivansabik/tranzita.git
 cd tranzita
 bower install
 php -S localhost:8000
 ```
-<center><img width="300" src="http://g.recordit.co/X5FTI91dCM.gif"></center>
+
+<p align="center"><img width="300" src="http://g.recordit.co/X5FTI91dCM.gif"></p>
 
 Está disponible [en Google Play](https://play.google.com/store/apps/details?id=com.mandroslabs.tranzita) si tienes Android
